@@ -1445,6 +1445,15 @@ img {
     position: absolute;
     background-color: #00000070;
 }
+.service-background{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    left: 0;
+    position: absolute;
+    background-color: #00000057;
+}
 .elementor-divider {
     text-align: left;
     padding-top: 2px;

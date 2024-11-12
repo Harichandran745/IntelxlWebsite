@@ -2,61 +2,63 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-  <!-- Bootstrap JavaScript Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
+    <!-- Bootstrap JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 
-  <!-- Font Awesome CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-  <!-- jQuery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.min.js"
-    integrity="sha512-b6lGn9+1aD2DgwZXuSY4BhhdrDURVzu7f/PASu4H1i5+CRpEalOOz/HNhgmxZTK9lObM1Q7ZG9jONPYz8klIMg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="layout.css">
-  <link rel="stylesheet" href="style.css">
-  <title>INTELXL - Medical Coding</title>
-  <style>
-    .accordion {
-        font-family: 'Open Sans', sans-serif;
-        background-color: transparent;
-        color: #6c757d;
-        cursor: pointer;
-        padding: 25px;
-        width: 100%;
-        outline: none !important;
-        text-align: left;
-        font-size: 16px;
-        font-weight: 800;
-        border: 2.5px solid #344351;
-    }
 
-    .content {
-        background-color: transparent;
-        font-family: 'Open Sans', sans-serif;
-        font-size: 16px;
-        padding: 15px;
-        display: none;
-        overflow: hidden;
-        border: 2.5px solid #344351;
-        color:#a8abaf;
-    }
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.min.js"
+        integrity="sha512-b6lGn9+1aD2DgwZXuSY4BhhdrDURVzu7f/PASu4H1i5+CRpEalOOz/HNhgmxZTK9lObM1Q7ZG9jONPYz8klIMg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-        .content p, h3 {
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="img/fav-icon.png" />
+    <title>INTELXL - Medical Coding</title>
+    <style>
+        .accordion {
+            font-family: 'Open Sans', sans-serif;
+            background-color: transparent;
+            color: #6c757d;
+            cursor: pointer;
+            padding: 25px;
+            width: 100%;
+            outline: none !important;
+            text-align: left;
+            font-size: 16px;
+            font-weight: 800;
+            border: 2.5px solid #344351;
+        }
+
+        .content {
+            background-color: transparent;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            padding: 15px;
+            display: none;
+            overflow: hidden;
+            border: 2.5px solid #344351;
+            color: #a8abaf;
+        }
+
+        .content p,
+        h3 {
             color: #a8abaf;
             font-weight: 600;
             margin: 0px;
@@ -73,38 +75,38 @@
             margin: 0px;
         }
 
-    .accordion:after {
-        content: '\02795';
-        font-size: 13px;
-        color: #F0F1EF;
-        float: left;
-        padding-right: 15px;
-        margin-left: 5px;
-    }
+        .accordion:after {
+            content: '\02795';
+            font-size: 13px;
+            color: #F0F1EF;
+            float: left;
+            padding-right: 15px;
+            margin-left: 5px;
+        }
 
-    .activetoggle:after {
-        content: "\2796";
-        color: #ffffff !important;
-    }
+        .activetoggle:after {
+            content: "\2796";
+            color: #ffffff !important;
+        }
 
-    .wrap-accordion {
-        margin-bottom: 1.2rem 0;
-    }
+        .wrap-accordion {
+            margin-bottom: 1.2rem 0;
+        }
 
-    input[type='checkbox'] {
-        display: none;
-    }
+        input[type='checkbox'] {
+            display: none;
+        }
 
-    .lbl-toggle {
-        display: block;
-        font-weight: bold;
-        font-family: 'Open Sans', sans-serif;
-        font-size: 1.2rem;
-        padding: 1rem;
-        cursor: pointer;
-        border-radius: 7px;
-        transition: all 0.25s ease-out;
-    }
+        .lbl-toggle {
+            display: block;
+            font-weight: bold;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.2rem;
+            padding: 1rem;
+            cursor: pointer;
+            border-radius: 7px;
+            transition: all 0.25s ease-out;
+        }
 
         .lbl-toggle:hover {
             color: #F0F1EF;
@@ -122,411 +124,477 @@
             transition: transform .2s ease-out;
         }
 
-    .toggle:checked + .lbl-toggle::before {
-        transform: rotate(90deg) translateX(-3px);
-    }
+        .toggle:checked+.lbl-toggle::before {
+            transform: rotate(90deg) translateX(-3px);
+        }
 
-    .accordion-content {
-        max-height: 0px;
-        overflow: hidden;
-        transition: max-height .25s ease-in-out;
-    }
+        .accordion-content {
+            max-height: 0px;
+            overflow: hidden;
+            transition: max-height .25s ease-in-out;
+        }
 
-    .toggle:checked + .lbl-toggle + .accordion-content {
-        max-height: 350px;
-    }
+        .toggle:checked+.lbl-toggle+.accordion-content {
+            max-height: 350px;
+        }
 
-    .toggle:checked + .lbl-toggle {
-        border-bottom-right-radius: 0;
-        border-bottom-left-radius: 0;
-    }
+        .toggle:checked+.lbl-toggle {
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
 
-    .accordion-content .content-inner {
-        background: rgba(250, 224, 66, .2);
-        border-bottom: 1px solid rgba(250, 224, 66, .45);
-        border-bottom-left-radius: 7px;
-        border-bottom-right-radius: 7px;
-        padding: .5rem 1rem;
-    }
+        .accordion-content .content-inner {
+            background: rgba(250, 224, 66, .2);
+            border-bottom: 1px solid rgba(250, 224, 66, .45);
+            border-bottom-left-radius: 7px;
+            border-bottom-right-radius: 7px;
+            padding: .5rem 1rem;
+        }
 
-    .col-centered {
-        float: none;
-        margin: 0 auto;
-        width: 90%;
-    }
-
-</style>
+        .col-centered {
+            float: none;
+            margin: 0 auto;
+            width: 90%;
+        }
+    </style>
 </head>
 
 <body>
-  <!-- ============---Header start----=================== -->
-  <header class="mainheader medicode-hdr">
-    <!-- =================---Desktop----====================== -->
-    <nav class="ix-nav ix-moved navbar navbar-expand-lg">
-        <div class="container">
-         <div class="logo mx-2">
-             <a class="navbar-brand" href="#">
-                 <img class="desktopViewimg" loading="lazy" src="img/intelxl-high-resolution-logo.png" alt="Intelxl" />
-             </a>
-         </div>
-         <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        
-         <div class="collapse navbar-collapse" id="navbarNav">
-             <ul class="navbar-nav ms-auto">
-                 <li class="nav-item">
-                     <a class="nav-link" href="Index.html">Home</a>
-                 </li>
-                 <li class="nav-item active">
-                     <a class="nav-link" href="MedicalCoding.html">Medical Coding</a>
-                 </li>
-                 <li class="nav-item">
-                    <a class="nav-link" href="Service.html">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="About.html">About us</a>
-                </li>
-                <li class="nav-item ">
-                 <a class="nav-link" href="Careers.html">Careers</a>
-                </li>
-                 <li class="nav-item ">
-                     <a class="nav-link" href="Contactus.html">Contact Us</a>
-                 </li>
-             </ul>
-         </div>
-        </div>
-     </nav>
-     <div class="carousel-caption">
-                <div class="captions">
-                    <!-- <h1 class="text-2">IntelXL</h1> -->
-                    <div class="text-2">We're making educational experiences better for everyone.</div>
-                    <p>A full 360º of solutions to help you create more innovative and immersive eLearning experiences.</p>
+    <!-- ============---Header start----=================== -->
+    <header class="mainheader medicode-hdr">
+        <!-- =================---Desktop----====================== -->
+        <nav class="ix-nav ix-moved navbar navbar-expand-lg">
+            <div class="container">
+                <div class="logo mx-2">
+                    <a class="navbar-brand" href="#">
+                        <img class="desktopViewimg" loading="lazy" src="img/intelxl-high-resolution-logo.png"
+                            alt="Intelxl" />
+                    </a>
                 </div>
-                <div class="btn  btn-lg text-white abt-btn btn-success"><a class="" href="About.html">Read More <i class="fa-solid fa-arrow-right"></i></a></div>                    
-     </div>
-    
+                <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-    <!--offcanvas for mobile responsive-->
-    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasWithBackdrop" aria-labelledby="offcanvasWithBackdropLabel" data-bs-backdrop="true">
-        <div class="offcanvas-header">
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
-        </div>
-        <div class="offcanvas-body p-0">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item p-2 ps-5">
-                    <a class="nav-link" href="Index.html">Home</a>
-                </li>
-                <li class="nav-item active p-2 ps-5">
-                    <a class="nav-link" href="MedicalCoding.html">Medical Coding</a>
-                </li>
-                <li class="nav-item  p-2 ps-5">
-                    <a class="nav-link" href="Service.html">Services</a>
-                </li>
-                <li class="nav-item p-2 ps-5">
-                    <a class="nav-link" href="About.html">About us</a>
-                </li>
-                <li class="nav-item p-2 ps-5">
-                 <a class="nav-link" href="Careers.html">Careers</a>
-                </li>
-                <li class="nav-item p-2 ps-5">
-                    <a class="nav-link" href="Contactus.html">Contact Us</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    
-
-   
-</header>
-  <!-- ============---Header end----=================== -->
-  <div class="container-fluid main-content p-0" id="benefits">
-    <div class="first container py-4 px-5">
-        <div class="row medCode-Service">
-           
-            <div class="px-5 col-md-6">
-                <h5 class="text-center">-Welcome To-</h5><br />
-                <h3 class="text-nowrap mb-2" style="font-weight:700;">INTELXL</h3><br />
-                <h6 style="color:#009837;">Our Mission :-</h6>
-                <h2 style="font-weight:800;">Transform Healthcare</h2>
-               
-            </div>
-            <div class="col-md-6">
-                <div class="">
-                    <img class="img-fluid medical-img" src="/img/medical-banner.jpg" alt="Our Team Image">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="Index.html">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="MedicalCoding.html">Medical Coding</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Service.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="About.html">About us</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="Careers.html">Careers</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="Contactus.html">Contact Us</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
+        </nav>
+        <div class="carousel-caption">
+            <div class="captions">
+                <!-- <h1 class="text-2">IntelXL</h1> -->
+                <div class="text-2">We're advancing medical coding for a better healthcare experience.</div>
+                <p>A comprehensive suite of solutions to help you build more accurate and immersive medical coding
+                    experiences.</p>
+
+            </div>
+            <div class="btn  btn-lg text-white abt-btn btn-success"><a class="" href="About.html">Read More <i
+                        class="fa-solid fa-arrow-right"></i></a></div>
         </div>
-    </div>
-    <section class="section-1 ">
-        <div class="elementor-background-overlay"></div>
-        <div class="medicode-cndt">
-            <div class="container p-5">
-                <ul class="nospace group overview mb-5">
-                    <li class="one_third p-3">
-                        <article>
-                            <a href="#"><img src="/img/revenue.jpg" alt="website template image"></a>
-                            <h6 class="heading">Revenue Cycle Services</h6>
-                            <p>
-                                A full suite of end-to-end revenue cycle management services for hospitals with
-                                professional billing, coding and patient management services
-                            </p>
-                            <footer class="float-end"><a class="btn service-btn" href="RevenueCycle.html">Start here</a></footer>
-                        </article>
+
+
+        <!--offcanvas for mobile responsive-->
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasWithBackdrop"
+            aria-labelledby="offcanvasWithBackdropLabel" data-bs-backdrop="true">
+            <div class="offcanvas-header">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body p-0">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item p-2 ps-5">
+                        <a class="nav-link" href="Index.html">Home</a>
                     </li>
-                    <li class="one_third p-3">
-                        <article>
-                            <a href="#"><img src="/img/medcoding.jpg" alt="website template image"></a>
-                            <h6 class="heading">Medical Coding Services</h6>
-                            <p>
-                                Get access to certified coders with experience in outpatient, inpatient, &
-                                emergency department coding. We have a pool of HCC coding specialists as well.
-                            </p>
-                            <footer class="float-end"><a class="btn service-btn" href="MedicalCodingService.html">Start here</a></footer>
-                        </article>
+                    <li class="nav-item active p-2 ps-5">
+                        <a class="nav-link" href="MedicalCoding.html">Medical Coding</a>
                     </li>
-                    <li class="one_third p-3">
-                        <article>
-                            <a href="#"><img src="/img/payer.jpg" alt="website template image"></a>
-                            <h6 class="heading">Payer Services</h6>
-                            <p>Learn the basics and a bit beyond, from zero knowledge and skill to decent playing skill</p>
-                            <footer class="float-end"><a class="btn service-btn" href="PayerService.html">Start here</a></footer>
-                        </article>
+                    <li class="nav-item  p-2 ps-5">
+                        <a class="nav-link" href="Service.html">Services</a>
                     </li>
-                    <li class="one_third p-3">
-                        <article>
-                            <a href="#"><img src="/img/HCC.jpg" alt="website template image"></a>
-                            <h6 class="heading">HCC Coding Service</h6>
-                            <p>
-                                ierarchical condition category (HCC) coding is a risk-adjustment model originally
-                                designed to estimate future health care costs for patients.
-                            </p>
-                            <footer class="float-end"><a class="btn service-btn" href="HccCoding.html">Start here</a></footer>
-                        </article>
+                    <li class="nav-item p-2 ps-5">
+                        <a class="nav-link" href="About.html">About us</a>
                     </li>
-                    <li class="one_third p-3">
-                        <article>
-                            <a href="#"><img src="/img/billing.jpg" alt="website template image"></a>
-                            <h6 class="heading">Medical billing services</h6>
-                            <p>Medical billing is a process that involves submitting claims for the healthcare services that you provide to patients.</p>
-                            <footer class="float-end"><a class="btn service-btn" href="MedicalBilling.html">Start here</a></footer>
-                        </article>
+                    <li class="nav-item p-2 ps-5">
+                        <a class="nav-link" href="Careers.html">Careers</a>
                     </li>
-                    <li class="one_third p-3">
-                        <article>
-                            <a href="#"><img src="/img/calling.jpg" alt="website template image"></a>
-                            <h6 class="heading">AR Calling Services</h6>
-                            <p>
-                                As an executive – accounts receivable caller, you will be responsible for
-                                making calls to insurance companies to follow-up on pending claims.
-                            </p>
-                            <footer class="float-end"><a class="btn service-btn" href="ARCalling.html">Start here</a></footer>
-                        </article>
+                    <li class="nav-item p-2 ps-5">
+                        <a class="nav-link" href="Contactus.html">Contact Us</a>
                     </li>
                 </ul>
             </div>
         </div>
-    </section>
-    <section class="collaps-section py-5">
-
-        <div class="col-centered">
-
-            <button class="accordion py-4">
-                MEDICAL CODING AUDIT SERVICES
-            </button>
-            <div class="content">
-                <p>
-                    Medical coding audit helps healthcare providers enhance and
-                    implement correct clinical documentation processes. Effective
-                    audits have ensured the recovery of millions in improper payments in
-                    Medicare and other insurance schemes. In today’s competitive healthcare
-                    landscape healthcare organizations must have regular auditing practices in
-                    place to promote organizational transparency and employee performance. However,
-                    to witness the right outcomes, organizations need to partner with an experienced medical coding audit partner.
-                </p>
-                <p class="pt-4">
-                    Outsource2india has over 24 years of experience in providing in handling
-                    the most complex coding file audits with absolute expertise and integrity.
-                    We specialize in end-to-end medical audits; from outpatient and inpatient
-                    procedures to behavioral and dental health treatments. We designate a qualified
-                    team to audit your files, create controls to catch and prevent mistakes and set up
-                    correct benchmarks for improvement. Our clients bank heavily on our understanding of
-                    codes and experience to make their healthcare processes compliant with regulations and save on expenses and time.
-                </p>
-                <h3 class="pt-4">Medical Coding Audit Services</h3>
-                <p class="pt-4">
-                    As an established medical coding audit services providing company, we provide a range of coding services to our clients. 
-                    The most important services among them include –
-                </p>
-                <h3 class="pt-4">Auditing Incorrect Use of CPT Codes</h3>
-                <p class="pt-4">
-                    We audit CPT codes to determine if it has been improperly used. Issues arise at the time of unbundling, upcoding, 
-                    improper reporting of time-based codes, using unlisted codes without documenting, failing to check National Correct 
-                    Coding Initiative (NCCI) edits when reporting multiple codes. We look into each of these aspects during the review.
-                </p>
-                <h4 class="pt-4">Auditing Right Place of Service</h4>
-                <p class="pt-4">
-                    Many codes are to be used on claims to specify where services were rendered. Each payer has their place of service code. 
-                    We audit codes to ensure there are no mistakes in the place of service. This ensures you do not get paid less for your services.
-                </p>
-                <h6 class="pt-4">Auditing Incorrect Use of Modifiers/ Missing Modifiers</h6>
-                <p class="pt-4">
-                    Improper use of modifiers can result in denial of claims. We audit files for missing or misplaced modifiers. Our modifier 
-                    audits are carried out to tell payers that there were special circumstances regarding the provision of care. Our assessment 
-                    of the correct use of modifiers is based on rules as well judgment.
-                </p>
-                <h6 class="pt-4">Auditing Incorrect Diagnosis</h6>
-                <p class="pt-4">
-                    When submitting claims for payment, the diagnosis codes reported with the service tells the payer as to why service was performed. 
-                    The right codes help support the medical necessity of the procedure. We audit files to ensure the assigned codes correspond with the 
-                    medical necessity. Likewise, we audit to ensure the diagnosis code for a patient is not changed to match the diagnosis codes listed in the coverage policy.
-                </p>
-                <h6 class="pt-4">Auditing Documentation to Make It Apt For Procedure</h6>
-                <p class="pt-4">
-                    We audit files to check if all the documentation leading to the procedure are correct. We check the files for the checkup reasons 
-                    and related history, physical examination findings, and diagnostic test results, place of service, date and identity of the provider, 
-                    clinical impression or diagnosis, plan for care etc. Our audit ensures there are no shortcomings in the documentation to cover the procedure.
-                </p>
-                <h6 class="pt-4">Audit to Identify Bundling or Cluster Issues</h6>
-                <p class="pt-4">
-                    Bundling codes need to be audited and understood well to ensure providers do not get paid less. We audit the single code that is used to replace 
-                    the other codes to ensure the payment made under the single code covers all the basic costs of the procedure. We review files to ensure compliance 
-                    with Local Medical Review Policy and National Correct Coding Initiative.
-                </p>
-                <h6 class="pt-4">Provide Recommendations Based on Audit Findings</h6>
-                <p class="pt-4">
-                    Our coding audit services also includes providing audit recommendation for correcting problems. Our audits take into account the cause of issues. 
-                    Our recommendation involves documenting in details about the ways to fix the existing flaws and address the actual cause to eliminate recurrence of 
-                    coding mistakes or failure to comply with laws and regulations.
-                </p>
-                <hr />
-                <h6 class="pt-4">Importance of Medical Coding Audit Services</h6>
-                <p class="pt-4">
-                    When an organization chooses us to conduct a medical coding audit, it may have many reasons for doing so, ranging from efficiency to liability issues. 
-                    Here are some of the top reasons organizations engage medical coding audit company –
-                </p>
-            </div>
-
-            <button class="accordion py-4">
-                HCC MEDICAL CODING SERVICES
-            </button>
-            <div class="content">
-                <p>
-                    Are you looking for accurate and error-free HCC medical coding services that will help you 
-                    streamline your processes? Are you on the lookout for skilled and experienced HCC medical 
-                    coding experts who can take care of all your requirements? Then, the best option for you would 
-                    be to outsource HCC medical coding services to an experienced HCC medical coding service provider.
-                </p>
-                <p class="pt-4">
-                    Outsource2india is one such HCC medical coding service providing company that can cater to all your 
-                    needs with ease. We have some of the most experienced HCC medical coding experts who can take care of 
-                    all your requirements with ease. We leverage the latest tools and technologies while delivering the best quality services to global clients.
-                </p>
-                <h6 class="pt-4">HCC Medical Coding Services We Offer</h6>
-                <p class="pt-4">
-                    INTELXL has been a pioneer in providing the best quality HCC medical coding services to global clients 
-                    for over two decades. We understand each client’s unique requirements and provide them with customized services that 
-                    will suit their business requirements. Some of the key HCC medical billing and coding services we offer include –
-                </p>
-            </div>
 
 
-            <button class="accordion">
-                CPT AND ICD-10 CODING SERVICES
-            </button>
-            <div class="content">
-                <p>
-                    Are you worried about the increasing number of pending claims and the accuracy of medical codes? Is the untimely reimbursement 
-                    a cause of concern for you? An expert understanding of ICD-10 and CPT codes bring dramatic changeover in the way you get paid. 
-                    It also clarifies disease management, simplifies research approach, and explains how to pursue public health.
-                </p>
-                <p class="pt-4">
-                    Outsource2india is a leading medical coding service provider with almost two decades of healthcare support service experience. 
-                    Our medical coders are proficient in documenting the patient’s medical state with an appropriate code, thereby leading to timely 
-                    claim payments for your healthcare facility. Also, our medical coding quality and safety standards are risk-stratified. Outsourcing 
-                    CPT and ICD-10 coding services to us will help you save time and boost your healthcare organization’s cash flow.
-                </p>
-            </div>
 
-            <button class="accordion">
-                MEDICAL CODING ANALYSIS SERVICES
-            </button>
-            <div class="content">
-                <p>
-                    With the ever-changing health care regulations and strict policies put in place via government entities, clinical coding and analysis 
-                    have become quite challenging. Inaccurate or incomplete submission of codes can result in a large number of claims being denied and underpayments, 
-                    and cause disruptions and bottlenecks in coding workflows. This can leave you with unnecessary claim-related headaches and billing problems. Incorrect 
-                    coding practices, out-of-date reporting methods, or even untrained coding personnel can damage the credibility of a clean claim. With our medical coding 
-                    analysis services, we aim to minimize risk inside the billing process and streamline medical coding analysis strategies for the future.
-                </p>
-                <p class="pt-4">
-                    Most organizations lack proper resources and enough expertise in medical coding analysis. This is why they choose to outsource medical coding 
-                    analysis services to an experienced medical coding analysis services providing company like Outsource2india. O2I has a huge workforce, modern 
-                    infrastructure, and international standard medical coding analysis services to provide efficient and quality output to clients.
-                </p>
-                <h6 class="pt-4">Medical Coding Analysis Services We Offer</h6>
-                <p class="pt-4">
-                    Your medical coding analysis to INTELXL enables you to reduce compliance risks and optimize your revenue. We have a team of experts
-                    (radiology medical billing and coding analysis) that will improve your practice’s finances by streamlining submissions of claims and reducing the 
-                    time and cost burden of administrative tasks. Our all-inclusive medical coding analysis is available as part of our full medical coding services. 
-                    We ensure the highest degree of data integrity and match experienced coders to your operations.
-                </p>
-                <p class="pt-4">
-                    We offer an entire set of varied medical coding analysis services, including –
-                </p>
-            </div>
+    </header>
+    <!-- ============---Header end----=================== -->
+    <div class="container-fluid main-content p-0" id="benefits">
+        <div class="first container py-4 px-5">
+            <div class="row medCode-Service">
 
-            <button class="accordion">
-                RISK ADJUSTMENT HCC CODING SERVICES
-            </button>
-            <div class="content">
-                <p>
-                    Are you looking for ways to communicate the patient’s complexity? Are you on the lookout for skilled and experienced risk adjustment HCC coding 
-                    experts who can cater to your needs? Then, the best option for you would be to outsource risk adjustment HCC coding services to an experienced and 
-                    skilled risk adjustment HCC coding service provider.
-                </p>
-                <p class="pt-4">
-                    INTELXL is one such risk adjustment HCC coding service providing company that can be your one-stop-shop for all your needs. We have
-                    some of the most experienced risk adjustment HCC coding specialists who can take care of all your needs. We leverage the latest HCC risk 
-                    adjustment tools while delivering top-notch services.
-                </p>
-                <h6 class="pt-4">RISK Adjustment HCC Coding Services We Offer</h6>
-                <p class="pt-4">
-                    INTELXL has been one of the leading providers of risk adjustment HCC coding services to clients around the globe for over two decades. We
-                    understand each customer’s specific requirements and provide them with services that are customized to their needs. Some of the key risk adjustment HCC 
-                    coding services we offer include –
-                </p>
+                <div class="px-5 col-md-6">
+                    <h5 class="text-center">-Welcome To-</h5><br />
+                    <h3 class="text-nowrap mb-2" style="font-weight:700;">INTELXL</h3><br />
+                    <h6 style="color:#009837;">Our Mission :-</h6>
+                    <h2 style="font-weight:800;">Transform Healthcare</h2>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="">
+                        <img class="img-fluid medical-img" src="/img/medical-banner.jpg" alt="Our Team Image">
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+        <section class="section-1 ">
+            <div class="elementor-background-overlay"></div>
+            <div class="medicode-cndt">
+                <div class="container p-5">
+                    <ul class="nospace group overview mb-5">
+                        <li class="one_third p-3">
+                            <article>
+                                <a href="#"><img src="/img/revenue.jpg" alt="website template image"></a>
+                                <h6 class="heading">Revenue Cycle Services</h6>
+                                <p>
+                                    A full suite of end-to-end revenue cycle management services for hospitals with
+                                    professional billing, coding and patient management services
+                                </p>
+                                <footer class="float-end"><a class="btn service-btn" href="RevenueCycle.html">Start
+                                        here</a></footer>
+                            </article>
+                        </li>
+                        <li class="one_third p-3">
+                            <article>
+                                <a href="#"><img src="/img/medcoding.jpg" alt="website template image"></a>
+                                <h6 class="heading">Medical Coding Services</h6>
+                                <p>
+                                    Get access to certified coders with experience in outpatient, inpatient, &
+                                    emergency department coding. We have a pool of HCC coding specialists as well.
+                                </p>
+                                <footer class="float-end"><a class="btn service-btn"
+                                        href="MedicalCodingService.html">Start here</a></footer>
+                            </article>
+                        </li>
+                        <li class="one_third p-3">
+                            <article>
+                                <a href="#"><img src="/img/payer.jpg" alt="website template image"></a>
+                                <h6 class="heading">Payer Services</h6>
+                                <p>Learn the basics and a bit beyond, from zero knowledge and skill to decent playing
+                                    skill</p>
+                                <footer class="float-end"><a class="btn service-btn" href="PayerService.html">Start
+                                        here</a></footer>
+                            </article>
+                        </li>
+                        <li class="one_third p-3">
+                            <article>
+                                <a href="#"><img src="/img/HCC.jpg" alt="website template image"></a>
+                                <h6 class="heading">HCC Coding Service</h6>
+                                <p>
+                                    ierarchical condition category (HCC) coding is a risk-adjustment model originally
+                                    designed to estimate future health care costs for patients.
+                                </p>
+                                <footer class="float-end"><a class="btn service-btn" href="HccCoding.html">Start
+                                        here</a></footer>
+                            </article>
+                        </li>
+                        <li class="one_third p-3">
+                            <article>
+                                <a href="#"><img src="/img/billing.jpg" alt="website template image"></a>
+                                <h6 class="heading">Medical billing services</h6>
+                                <p>Medical billing is a process that involves submitting claims for the healthcare
+                                    services that you provide to patients.</p>
+                                <footer class="float-end"><a class="btn service-btn" href="MedicalBilling.html">Start
+                                        here</a></footer>
+                            </article>
+                        </li>
+                        <li class="one_third p-3">
+                            <article>
+                                <a href="#"><img src="/img/calling.jpg" alt="website template image"></a>
+                                <h6 class="heading">AR Calling Services</h6>
+                                <p>
+                                    As an executive – accounts receivable caller, you will be responsible for
+                                    making calls to insurance companies to follow-up on pending claims.
+                                </p>
+                                <footer class="float-end"><a class="btn service-btn" href="ARCalling.html">Start
+                                        here</a></footer>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="collaps-section py-5">
 
-</div>
-  <!-- ======footer===== -->
-  <footer>
-    <div class="container">
-      <div class="footerContent py-4 text-center">
-          © Copyright <span id="currentYear"></span> IntelXL. All Rights Reserved.
-      </div>
-  </div>
-  </footer>
-  <script src="script.js"></script>
-  <script>
-    var coll = document.getElementsByClassName("accordion");
-    var i;
+            <div class="col-centered">
 
-    for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function () {
-            this.classList.toggle("activetoggle");
-            var content = this.nextElementSibling;
-            if (content.style.display === "block") {
-                content.style.display = "none";
-            } else {
-                content.style.display = "block";
-            }
-        });
-    }
+                <button class="accordion py-4">
+                    MEDICAL CODING AUDIT SERVICES
+                </button>
+                <div class="content">
+                    <p>
+                        Medical coding audit helps healthcare providers enhance and
+                        implement correct clinical documentation processes. Effective
+                        audits have ensured the recovery of millions in improper payments in
+                        Medicare and other insurance schemes. In today’s competitive healthcare
+                        landscape healthcare organizations must have regular auditing practices in
+                        place to promote organizational transparency and employee performance. However,
+                        to witness the right outcomes, organizations need to partner with an experienced medical coding
+                        audit partner.
+                    </p>
+                    <p class="pt-4">
+                        Outsource2india has over 24 years of experience in providing in handling
+                        the most complex coding file audits with absolute expertise and integrity.
+                        We specialize in end-to-end medical audits; from outpatient and inpatient
+                        procedures to behavioral and dental health treatments. We designate a qualified
+                        team to audit your files, create controls to catch and prevent mistakes and set up
+                        correct benchmarks for improvement. Our clients bank heavily on our understanding of
+                        codes and experience to make their healthcare processes compliant with regulations and save on
+                        expenses and time.
+                    </p>
+                    <h3 class="pt-4">Medical Coding Audit Services</h3>
+                    <p class="pt-4">
+                        As an established medical coding audit services providing company, we provide a range of coding
+                        services to our clients.
+                        The most important services among them include –
+                    </p>
+                    <h3 class="pt-4">Auditing Incorrect Use of CPT Codes</h3>
+                    <p class="pt-4">
+                        We audit CPT codes to determine if it has been improperly used. Issues arise at the time of
+                        unbundling, upcoding,
+                        improper reporting of time-based codes, using unlisted codes without documenting, failing to
+                        check National Correct
+                        Coding Initiative (NCCI) edits when reporting multiple codes. We look into each of these aspects
+                        during the review.
+                    </p>
+                    <h4 class="pt-4">Auditing Right Place of Service</h4>
+                    <p class="pt-4">
+                        Many codes are to be used on claims to specify where services were rendered. Each payer has
+                        their place of service code.
+                        We audit codes to ensure there are no mistakes in the place of service. This ensures you do not
+                        get paid less for your services.
+                    </p>
+                    <h6 class="pt-4">Auditing Incorrect Use of Modifiers/ Missing Modifiers</h6>
+                    <p class="pt-4">
+                        Improper use of modifiers can result in denial of claims. We audit files for missing or
+                        misplaced modifiers. Our modifier
+                        audits are carried out to tell payers that there were special circumstances regarding the
+                        provision of care. Our assessment
+                        of the correct use of modifiers is based on rules as well judgment.
+                    </p>
+                    <h6 class="pt-4">Auditing Incorrect Diagnosis</h6>
+                    <p class="pt-4">
+                        When submitting claims for payment, the diagnosis codes reported with the service tells the
+                        payer as to why service was performed.
+                        The right codes help support the medical necessity of the procedure. We audit files to ensure
+                        the assigned codes correspond with the
+                        medical necessity. Likewise, we audit to ensure the diagnosis code for a patient is not changed
+                        to match the diagnosis codes listed in the coverage policy.
+                    </p>
+                    <h6 class="pt-4">Auditing Documentation to Make It Apt For Procedure</h6>
+                    <p class="pt-4">
+                        We audit files to check if all the documentation leading to the procedure are correct. We check
+                        the files for the checkup reasons
+                        and related history, physical examination findings, and diagnostic test results, place of
+                        service, date and identity of the provider,
+                        clinical impression or diagnosis, plan for care etc. Our audit ensures there are no shortcomings
+                        in the documentation to cover the procedure.
+                    </p>
+                    <h6 class="pt-4">Audit to Identify Bundling or Cluster Issues</h6>
+                    <p class="pt-4">
+                        Bundling codes need to be audited and understood well to ensure providers do not get paid less.
+                        We audit the single code that is used to replace
+                        the other codes to ensure the payment made under the single code covers all the basic costs of
+                        the procedure. We review files to ensure compliance
+                        with Local Medical Review Policy and National Correct Coding Initiative.
+                    </p>
+                    <h6 class="pt-4">Provide Recommendations Based on Audit Findings</h6>
+                    <p class="pt-4">
+                        Our coding audit services also includes providing audit recommendation for correcting problems.
+                        Our audits take into account the cause of issues.
+                        Our recommendation involves documenting in details about the ways to fix the existing flaws and
+                        address the actual cause to eliminate recurrence of
+                        coding mistakes or failure to comply with laws and regulations.
+                    </p>
+                    <hr />
+                    <h6 class="pt-4">Importance of Medical Coding Audit Services</h6>
+                    <p class="pt-4">
+                        When an organization chooses us to conduct a medical coding audit, it may have many reasons for
+                        doing so, ranging from efficiency to liability issues.
+                        Here are some of the top reasons organizations engage medical coding audit company –
+                    </p>
+                </div>
 
-</script>
+                <button class="accordion py-4">
+                    HCC MEDICAL CODING SERVICES
+                </button>
+                <div class="content">
+                    <p>
+                        Are you looking for accurate and error-free HCC medical coding services that will help you
+                        streamline your processes? Are you on the lookout for skilled and experienced HCC medical
+                        coding experts who can take care of all your requirements? Then, the best option for you would
+                        be to outsource HCC medical coding services to an experienced HCC medical coding service
+                        provider.
+                    </p>
+                    <p class="pt-4">
+                        Outsource2india is one such HCC medical coding service providing company that can cater to all
+                        your
+                        needs with ease. We have some of the most experienced HCC medical coding experts who can take
+                        care of
+                        all your requirements with ease. We leverage the latest tools and technologies while delivering
+                        the best quality services to global clients.
+                    </p>
+                    <h6 class="pt-4">HCC Medical Coding Services We Offer</h6>
+                    <p class="pt-4">
+                        INTELXL has been a pioneer in providing the best quality HCC medical coding services to global
+                        clients
+                        for over two decades. We understand each client’s unique requirements and provide them with
+                        customized services that
+                        will suit their business requirements. Some of the key HCC medical billing and coding services
+                        we offer include –
+                    </p>
+                </div>
+
+
+                <button class="accordion">
+                    CPT AND ICD-10 CODING SERVICES
+                </button>
+                <div class="content">
+                    <p>
+                        Are you worried about the increasing number of pending claims and the accuracy of medical codes?
+                        Is the untimely reimbursement
+                        a cause of concern for you? An expert understanding of ICD-10 and CPT codes bring dramatic
+                        changeover in the way you get paid.
+                        It also clarifies disease management, simplifies research approach, and explains how to pursue
+                        public health.
+                    </p>
+                    <p class="pt-4">
+                        Outsource2india is a leading medical coding service provider with almost two decades of
+                        healthcare support service experience.
+                        Our medical coders are proficient in documenting the patient’s medical state with an appropriate
+                        code, thereby leading to timely
+                        claim payments for your healthcare facility. Also, our medical coding quality and safety
+                        standards are risk-stratified. Outsourcing
+                        CPT and ICD-10 coding services to us will help you save time and boost your healthcare
+                        organization’s cash flow.
+                    </p>
+                </div>
+
+                <button class="accordion">
+                    MEDICAL CODING ANALYSIS SERVICES
+                </button>
+                <div class="content">
+                    <p>
+                        With the ever-changing health care regulations and strict policies put in place via government
+                        entities, clinical coding and analysis
+                        have become quite challenging. Inaccurate or incomplete submission of codes can result in a
+                        large number of claims being denied and underpayments,
+                        and cause disruptions and bottlenecks in coding workflows. This can leave you with unnecessary
+                        claim-related headaches and billing problems. Incorrect
+                        coding practices, out-of-date reporting methods, or even untrained coding personnel can damage
+                        the credibility of a clean claim. With our medical coding
+                        analysis services, we aim to minimize risk inside the billing process and streamline medical
+                        coding analysis strategies for the future.
+                    </p>
+                    <p class="pt-4">
+                        Most organizations lack proper resources and enough expertise in medical coding analysis. This
+                        is why they choose to outsource medical coding
+                        analysis services to an experienced medical coding analysis services providing company like
+                        Outsource2india. O2I has a huge workforce, modern
+                        infrastructure, and international standard medical coding analysis services to provide efficient
+                        and quality output to clients.
+                    </p>
+                    <h6 class="pt-4">Medical Coding Analysis Services We Offer</h6>
+                    <p class="pt-4">
+                        Your medical coding analysis to INTELXL enables you to reduce compliance risks and optimize your
+                        revenue. We have a team of experts
+                        (radiology medical billing and coding analysis) that will improve your practice’s finances by
+                        streamlining submissions of claims and reducing the
+                        time and cost burden of administrative tasks. Our all-inclusive medical coding analysis is
+                        available as part of our full medical coding services.
+                        We ensure the highest degree of data integrity and match experienced coders to your operations.
+                    </p>
+                    <p class="pt-4">
+                        We offer an entire set of varied medical coding analysis services, including –
+                    </p>
+                </div>
+
+                <button class="accordion">
+                    RISK ADJUSTMENT HCC CODING SERVICES
+                </button>
+                <div class="content">
+                    <p>
+                        Are you looking for ways to communicate the patient’s complexity? Are you on the lookout for
+                        skilled and experienced risk adjustment HCC coding
+                        experts who can cater to your needs? Then, the best option for you would be to outsource risk
+                        adjustment HCC coding services to an experienced and
+                        skilled risk adjustment HCC coding service provider.
+                    </p>
+                    <p class="pt-4">
+                        INTELXL is one such risk adjustment HCC coding service providing company that can be your
+                        one-stop-shop for all your needs. We have
+                        some of the most experienced risk adjustment HCC coding specialists who can take care of all
+                        your needs. We leverage the latest HCC risk
+                        adjustment tools while delivering top-notch services.
+                    </p>
+                    <h6 class="pt-4">RISK Adjustment HCC Coding Services We Offer</h6>
+                    <p class="pt-4">
+                        INTELXL has been one of the leading providers of risk adjustment HCC coding services to clients
+                        around the globe for over two decades. We
+                        understand each customer’s specific requirements and provide them with services that are
+                        customized to their needs. Some of the key risk adjustment HCC
+                        coding services we offer include –
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <!-- ======footer===== -->
+    <footer>
+        <div class="container">
+            <div class="footerContent py-4 text-center">
+                © Copyright <span id="currentYear"></span> IntelXL. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        var coll = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("activetoggle");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+
+    </script>
 </body>
 
 </html>
