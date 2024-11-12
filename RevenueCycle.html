@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- Bootstrap JavaScript Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.min.js"
+    integrity="sha512-b6lGn9+1aD2DgwZXuSY4BhhdrDURVzu7f/PASu4H1i5+CRpEalOOz/HNhgmxZTK9lObM1Q7ZG9jONPYz8klIMg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Agape works - Medical Coding</title>
+  <style>
+    .accordion {
+        font-family: 'Open Sans', sans-serif;
+        background-color: transparent;
+        color: #6c757d;
+        cursor: pointer;
+        padding: 25px;
+        width: 100%;
+        outline: none !important;
+        text-align: left;
+        font-size: 16px;
+        font-weight: 800;
+        border: 2.5px solid #344351;
+    }
+
+    .content {
+        background-color: transparent;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        padding: 15px;
+        display: none;
+        overflow: hidden;
+        border: 2.5px solid #344351;
+        color:#a8abaf;
+    }
+
+        .content p, h3 {
+            color: #a8abaf;
+            font-weight: 600;
+            margin: 0px;
+        }
+
+        .content hr {
+            opacity: 2;
+            color: #a8abaf;
+        }
+
+        .content h6 {
+            color: #198754;
+            font-weight: 600;
+            margin: 0px;
+        }
+
+    .accordion:after {
+        content: '\02795';
+        font-size: 13px;
+        color: #F0F1EF;
+        float: left;
+        padding-right: 15px;
+        margin-left: 5px;
+    }
+
+    .activetoggle:after {
+        content: "\2796";
+        color: #ffffff !important;
+    }
+
+    .wrap-accordion {
+        margin-bottom: 1.2rem 0;
+    }
+
+    input[type='checkbox'] {
+        display: none;
+    }
+
+    .lbl-toggle {
+        display: block;
+        font-weight: bold;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.2rem;
+        padding: 1rem;
+        cursor: pointer;
+        border-radius: 7px;
+        transition: all 0.25s ease-out;
+    }
+
+        .lbl-toggle:hover {
+            color: #F0F1EF;
+        }
+
+        .lbl-toggle::before {
+            content: ' ';
+            display: inline-block;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-left: 5px solid currentColor;
+            vertical-align: middle;
+            margin-right: .7rem;
+            transform: translateY(-2px);
+            transition: transform .2s ease-out;
+        }
+
+    .toggle:checked + .lbl-toggle::before {
+        transform: rotate(90deg) translateX(-3px);
+    }
+
+    .accordion-content {
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height .25s ease-in-out;
+    }
+
+    .toggle:checked + .lbl-toggle + .accordion-content {
+        max-height: 350px;
+    }
+
+    .toggle:checked + .lbl-toggle {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .accordion-content .content-inner {
+        background: rgba(250, 224, 66, .2);
+        border-bottom: 1px solid rgba(250, 224, 66, .45);
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+        padding: .5rem 1rem;
+    }
+
+    .col-centered {
+        float: none;
+        margin: 0 auto;
+        width: 90%;
+    }
+
+</style>
+</head>
+
+<body>
+  <!-- ============---Header start----=================== -->
+  <header class="main">
+    <!-- =================---Desktop----====================== -->
+    <nav class="ix-nav ix-moved navbar navbar-expand-lg">
+        <div class="container">
+         <div class="logo mx-2">
+             <a class="navbar-brand" href="#">
+                 <img class="desktopViewimg" loading="lazy" src="img/intelxl-high-resolution-logo.png" alt="Intelxl" />
+             </a>
+         </div>
+         <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+         <div class="collapse navbar-collapse" id="navbarNav">
+             <ul class="navbar-nav ms-auto">
+                 <li class="nav-item">
+                     <a class="nav-link" href="Index.html">Home</a>
+                 </li>
+                 <li class="nav-item">
+                     <a class="nav-link" href="About.html">About us</a>
+                 </li>
+                 <li class="nav-item active">
+                     <a class="nav-link" href="MedicalCoding.html">Medical Coding</a>
+                 </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="SoftwareDevelopment.html">Services</a>
+                </li>
+                 <li class="nav-item ">
+                     <a class="nav-link" href="Contactus.html">Contact Us</a>
+                 </li>
+                 <li class="nav-item ">
+                  <a class="nav-link" href="Careers.html">Careers</a>
+              </li>
+             </ul>
+         </div>
+        </div>
+     </nav>
+     <section class="banner-cection">
+      <div class="container-fluid medicode-banner revenue-banner d-flex justify-content-center align-items-center p-0 ">
+          <div class="revenue-background"></div>
+          <div style="z-index:9;">
+              <h2 class="text-center text-white font-monospace">Revenue Cycle Services</h2>
+          </div>
+      </div>
+  </section>
+    
+
+    <!--offcanvas for mobile responsive-->
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasWithBackdrop" aria-labelledby="offcanvasWithBackdropLabel" data-bs-backdrop="true">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body p-0">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item active p-2 ps-5">
+                    <a class="nav-link" href="Index.html">Home</a>
+                </li>
+                <li class="nav-item p-2 ps-5">
+                    <a class="nav-link" href="About.html">About us</a>
+                </li>
+                <li class="nav-item p-2 ps-5">
+                    <a class="nav-link" href="SoftwareDevelopment.html">Services</a>
+                </li>
+                <!--
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Services
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="SoftwareDevelopment.html">Software Development</a></li>
+                        <li class="disabled"><a class="dropdown-item disabled" href="AI.html">Artificial Intelligence and Analytics</a></li>
+                        <li class="disabled"><a class="dropdown-item disabled" href="WorkForce.html">Workforce</a></li>
+                    </ul>
+                </li>
+                -->
+                <li class="nav-item p-2 ps-5">
+                    <a class="nav-link unwnt-lnk" href="ourClient.html">Our Clients</a>
+                </li>
+                <li class="nav-item p-2 ps-5">
+                    <a class="nav-link" href="Contactus.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+
+   
+</header>
+  <!-- ============---Header end----=================== -->
+  <div class="container-fluid main-content p-0" id="benefits">
+    
+    <section class="revenue-content" style="background-color:#e8fdf1;">
+        <div class="container">
+            <div class="px-4 py-3">
+                <h2 class="mb-2">Revenue Cycle Services</h2>
+                <div class="elementor-divider">
+                    <span class="elementor-divider-separator">
+                    </span>
+                </div>
+                <h4>Revenue cycle management services Overview</h4>
+                <p>
+                    Trust Agape Works Technology to take your medical care revenue cycle management to unheard-of heights. 
+                    You will witness fewer case refusals, the ability to differentiate reasons for income spills and further 
+                    develop income, and lesser days in A/R. We endeavor to maintain a regular relationship between medical services 
+                    specialists, payers, and patients in order to instill deftness in your income cycle.
+                </p>
+                <p>
+                    Hiring and training resources can often become a bottleneck for growth in revenue cycle management. The need to 
+                    maintain high accuracy while meeting tight deadlines adds to the challenge. Increasing costs per employee can result 
+                    in reduced profitability, and fluctuating volumes further complicate the process. Since these challenges can impede business 
+                    growth and lower margins, we provide tailored medical revenue cycle management services to alleviate these problems and drive 
+                    success for our clients.
+                </p>
+                <p>
+                    Leading institutions in the healthcare sector, including billing companies, physician offices, hospitals, and software 
+                    companies, have partnered with us to drive profitability, accuracy, compliance, and scalability for your organization. 
+                    We offer trained resources to enable quick ramp-up and meet the growing demand. We only work with CPCs certified by AAPC, 
+                    and our dedicated QC teams and second-level reviews guarantee the quality of coding and accuracy. We can work with the systems 
+                    you have in place, and our experience with top 10 PM systems ensures familiarity and improves efficiency.
+                </p>
+                <p>
+                    We enable much lower costs and increased profitability by reducing overheads and infrastructure requirements. The high quality of 
+                    our services ensures accuracy and successful claims processing, with 99%+ quality and 98% of claims getting paid on the first pass. 
+                    The average TAT of 24 hours or less demonstrates our commitment to prompt and timely service delivery.
+                </p>
+                <p>
+                    We understand the importance of data security and compliance in healthcare. Our 100% HIPAA compliant processes ensure patient data 
+                    confidentiality and security. Moreover, our top data security certifications, including ISO 27001 and SOC2, ensure data protection. 
+                    We offer flexibility and adaptability to meet fluctuating volumes through short-term staffing and overtime, providing scalability to 
+                    our clients. We guarantee high-quality service delivery with a world-class delivery center, infrastructure, and quality processes – allowing 
+                    top management to focus on business growth.
+                </p>
+                <h6 class="mb-2">Healthcare Revenue Cycle Management Services We Offer</h6>
+                <p>
+                    As an experienced revenue cycle management service provider, we offer a range of specialized solutions designed to optimize your revenue cycle, 
+                    improve cash flow, and enhance the patient experience –
+                </p>
+                <h3 class="mb-2 text-primary">Process Flow for Comprehensive RCM Services</h3>
+                <p>
+                    Our streamlined Revenue Cycle Management process maximizes efficiency, accelerates reimbursements, and ensures optimal financial performance. We 
+                    have a comprehensive approach that covers every step of the revenue cycle, from patient pre-authorization to denial management, delivering seamless 
+                    operations and improved revenue outcomes for your healthcare organization
+                </p>
+                <h4 class="mb-2 text-primary">Why Choose Us as Your Revenue Cycle Management Company?</h4>
+                <p>
+                    Our Revenue Cycle Management solutions are designed exclusively for companies in the healthcare sector and revenue cycle management firms. 
+                    Our expertise in navigating the complexities of healthcare revenue cycles enables us to provide accurate and timely solutions that drive 
+                    tangible results. By choosing our services, you gain access to a range of benefits that optimize your operations, reduce costs, and position 
+                    your organization for sustainable growth –
+                </p>
+                <h6 class="mb-2 text-primary">Lower Overheads and Infrastructure Requirements</h6>
+                <p>
+                    Your revenue cycle management to us, you can significantly reduce overhead costs associated with staffing, training, and maintaining 
+                    infrastructure, freeing up resources to invest in other critical areas of your business.
+                </p>
+                <h6 class="mb-2 text-primary">High Quality of Services</h6>
+                <p>
+                    Our team of experienced professionals ensures exceptional quality in every aspect of revenue cycle management, from claims processing 
+                    to denial management.
+                </p>
+                <h6 class="mb-2 text-primary">Familiarity with Various Practice Management Systems</h6>
+                <p>
+                    Our team is well-versed in working with different practice management systems, ensuring seamless integration and improved efficiency 
+                    and accuracy in your revenue cycle processes.
+                </p>
+                <h6 class="mb-2 text-primary">Prompt and Timely Service Delivery</h6>
+                <p>
+                    Our average TAT is 24 hours or less and we prioritize prompt service delivery. You can rely on us for timely responses, quick claims 
+                    processing, and efficient resolution of any revenue cycle issues.
+                </p>
+                <h6 class="mb-2 text-primary">High Accuracy and Successful Claims Processing</h6>
+                <p>
+                    Our commitment to quality is reflected in our track record of achieving 99%+ quality and 98% claims getting paid in the first pass. 
+                    Experience high accuracy and successful claims processing, leading to improved cash flow and revenue.
+                </p>
+                <h6 class="mb-2 text-primary">100% HIPAA Compliant Processes</h6>
+                <p>
+                    Rest assured that our revenue cycle management processes adhere to stringent HIPAA regulations, ensuring the confidentiality 
+                    and security of patient data throughout the entire cycle.
+                </p>
+                <h6 class="mb-2 text-primary">Data Security</h6>
+                <p>
+                    Our commitment to data protection is validated by our top data security certifications, we prioritize the security of your 
+                    sensitive information.
+                </p>
+                <h6 class="mb-2 text-primary">Flexibility to Meet Fluctuating Volumes</h6>
+                <p>
+                    Our ability to scale up resources and provide short-term staffing and overtime allows us to adapt to your fluctuating volumes 
+                    seamlessly. Benefit from the flexibility to handle increased workloads efficiently.
+                </p>
+                <h6 class="mb-2 text-primary">Flexible Pricing</h6>
+                <p>
+                    We offer flexible pricing options tailored to your specific needs. We understand that every healthcare organization 
+                    is unique, and we work closely with you to create a pricing structure that aligns with your budget and goals, ensuring 
+                    cost-effectiveness and maximizing the value of our services.
+                </p>
+            </div>
+        </div>
+    </section>
+</div>
+  <!-- ======footer===== -->
+  <footer>
+    <div class="container">
+      <div class="footerContent py-4 text-center">
+          © Copyright <span id="currentYear"></span> IntelXL. All Rights Reserved.
+      </div>
+  </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
