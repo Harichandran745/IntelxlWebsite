@@ -34,8 +34,8 @@
 
 <body>
     <!-- ============---Header start----=================== -->
-    <header class="mainheader home-hdr">
-        <video autoplay="autoplay" loop="" muted="" playsinline="" id="bg-video" class="vd-width"><source src="img/pexels_videos_2611250 (2160p).mp4" type="video/mp4"></video>
+    <header class="mainheader home-hdr">        
+        <!-- <video autoplay="autoplay" loop="" muted="" playsinline="" id="bg-video" class="vd-width"><source src="img/pexels_videos_2611250 (2160p).mp4" type="video/mp4"></video> -->
         <!-- =================---Desktop----====================== -->
         <nav class="ix-nav ix-moved navbar navbar-expand-lg">
             <div class="container">
@@ -45,7 +45,7 @@
                  </a>
              </div>
              <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <i class="fa-solid fa-bars"></i>
             </button>
             
              <div class="collapse navbar-collapse" id="navbarNav">
@@ -72,18 +72,46 @@
              </div>
             </div>
          </nav>
-         <div class="carousel-caption">
+         <section>
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-inner parallax">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                        <img src="img/home-back.jpg" class="carousel-img img-fluid d-block w-100"  alt="...">
+                        <div class="carousel-caption">
+                            <div class="captions">
+                                <div class="text-2">We're making educational experiences better for everyone.</div>
+                                <p class="text-white">A full 360º of solutions to help you create more innovative and immersive eLearning experiences.</p>
+                                <img src="img/carouselimg/line.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="img/collaps-bac.jpg" class="carousel-img img-fluid d-block w-100"  alt="...">
+                        <div class="carousel-caption">
+                            <div class="captions">
+                                <div class="text-2">We're advancing medical coding for a better healthcare experience.</div>
+                                <p class="text-white">A comprehensive suite of solutions to help you build more accurate and immersive medical coding
+                                   experiences.
+                                </p>
+                                <img src="img/carouselimg/line.png">
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+         </section>
+         <!-- <div class="carousel-caption">
                     <div class="captions">
-                        <!-- <h1 class="text-2">IntelXL</h1> -->
                         <div class="text-2">We're making educational experiences better for everyone.</div>
                         <p>A full 360º of solutions to help you create more innovative and immersive eLearning experiences.</p>
                     </div>
                     <div class="btn  btn-lg text-white abt-btn btn-success"><a class="" href="About.html">Read More <i class="fa-solid fa-arrow-right"></i></a></div>                    
-         </div>
+         </div> -->
         
 
         <!--offcanvas for mobile responsive-->
-        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasWithBackdrop" aria-labelledby="offcanvasWithBackdropLabel" data-bs-backdrop="true">
+        <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasWithBackdrop" aria-labelledby="offcanvasWithBackdropLabel" data-bs-backdrop="true">
             <div class="offcanvas-header">
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
             </div>

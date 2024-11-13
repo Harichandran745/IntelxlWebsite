@@ -1,12 +1,11 @@
 /* ==========off-canvas======== */
 /* =============carousel================= */
 #carouselExampleDark {
-    max-height: 600px;
+    height: 100vh;
     overflow: hidden;
 }
 
 .carousel-img {
-    max-height: 80vh;
     width: 100vw !important;
     object-fit: fill;
     background-position: center center;
@@ -29,7 +28,7 @@
 
 .carousel-caption {
     position: absolute;
-    transform: translateY(-50%);
+    transform: translateY(-130%);
     height: fit-content;
 }
 
@@ -1494,6 +1493,13 @@ img {
     background-position: center;
     background-repeat: no-repeat;
 }
+.card-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 5;
+    text-overflow: ellipsis;
+}
 /* Media Queries for Responsiveness */
 @keyframes scrollAnimation {
     0% {
@@ -1588,5 +1594,23 @@ img {
 
     .cta > :first-child {
         margin-top: 0;
+    }
+}
+@media screen and (max-width: 768px) {
+    .card-text {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        -webkit-line-clamp: 6;
+        text-overflow: ellipsis;
+    }
+}
+@media screen and (max-width: 1120px) {
+    .card-text {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        -webkit-line-clamp: 4;
+        text-overflow: ellipsis;
     }
 }
