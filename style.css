@@ -512,18 +512,18 @@ h2 {
 
 .top-parallax {
     /* The image used */
-    background-image: url('img/solve-problems.jpg');
+    background-image: url('img/services-bg.jpg');
     /* Set a specific height */
 }
 
 .bot-parallax {
     /* The image used */
-    background-image: url('img/solve-problems.jpg');
+    background-image: url('img/services-bg.jpg');
 }
 
 .about-parallax {
     /* The image used */
-    background-image: url("img/Solve-Problems.jpg");
+    background-image: url("img/services-bg.jpg");
 }
 /* ====offer========== */
 .offer {
