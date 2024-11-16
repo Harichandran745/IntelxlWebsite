@@ -28,7 +28,7 @@
 
 .carousel-caption {
     position: absolute;
-    transform: translateY(-130%);
+    transform: translateY(-80%);
     height: fit-content;
 }
 
@@ -1236,7 +1236,7 @@ rightanim {
     }
 
 .contact-detail {
-    padding: 80px;
+    padding: 10%;
 }
 
 .middle-image {
@@ -1599,6 +1599,29 @@ img {
         margin-top: 0;
     }
 }
+@media screen and (max-width: 1450px) {
+    .carousel-caption {
+        position: absolute;
+        transform: translateY(-50%);
+        height: fit-content;
+    }
+}
+@media screen and (max-width: 1120px) {
+    .card-text {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        -webkit-line-clamp: 4;
+        text-overflow: ellipsis;
+    }
+}
+@media screen and (max-width: 885px) {
+    .carousel-caption {
+        position: absolute;
+        transform: translateY(100%);
+        height: fit-content;
+    }
+}
 @media screen and (max-width: 768px) {
     .card-text {
         display: -webkit-box;
@@ -1611,12 +1634,5 @@ img {
         max-height: none;
     }
 }
-@media screen and (max-width: 1120px) {
-    .card-text {
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        -webkit-line-clamp: 4;
-        text-overflow: ellipsis;
-    }
-}
+
+
