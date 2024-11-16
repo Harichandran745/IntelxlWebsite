@@ -1500,6 +1500,9 @@ img {
     -webkit-line-clamp: 6;
     text-overflow: ellipsis;
 }
+.home-content{
+    max-height: 400px;
+}
 /* Media Queries for Responsiveness */
 @keyframes scrollAnimation {
     0% {
@@ -1603,6 +1606,9 @@ img {
         overflow: hidden;
         -webkit-line-clamp: 6;
         text-overflow: ellipsis;
+    }
+    .home-content{
+        max-height: none;
     }
 }
 @media screen and (max-width: 1120px) {
