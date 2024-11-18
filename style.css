@@ -508,10 +508,17 @@ h2 {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+.parallax-text{
+    font-weight: 700;
+}
 .top-parallax {
     /* The image used */
     background-image: url('img/services-bg.jpg');
+    /* Set a specific height */
+}
+.builder-parallax {
+    /* The image used */
+    background-image: url('img/builder-parallax.jpg');
     /* Set a specific height */
 }
 
@@ -530,7 +537,9 @@ h2 {
     background-size: cover; */
     padding: 50px;
 }
-
+.builder-content{
+    background-image: linear-gradient(360deg, #f9fafb 0%, #07ff6129 69%);
+}
 @media screen and (max-width: 400px) {
     .offer {
         padding: 50px;
@@ -1194,7 +1203,20 @@ rightanim {
     bottom: 0;
     height: 100%;
 }
-
+.home-card:hover .building-card-overlay {
+    height: 100%;
+}
+.building-card-overlay{
+    position: absolute;
+    border-radius: 10px;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    background-color: #474d4fa1;
+}
 .card-ovrly {
     position: absolute;
     border-radius: 10px;
