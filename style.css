@@ -521,6 +521,11 @@ h2 {
     background-image: url('img/builder-parallax.jpg');
     /* Set a specific height */
 }
+.books-parallax {
+    /* The image used */
+    background-image: url('img/book-library.jpg');
+    /* Set a specific height */
+}
 
 .bot-parallax {
     /* The image used */
@@ -1562,6 +1567,13 @@ img {
     background-size: contain;
     opacity: 1;
     transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+.book-image{
+    min-height: 350px;
+    border-radius: 10px;
+}
+.published-books{
+    border-radius: 10px;
 }
 @media screen and (max-width: 750px) {
     .overview > li {
