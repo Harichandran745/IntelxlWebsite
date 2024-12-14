@@ -1572,6 +1572,17 @@ img {
     min-height: 350px;
     border-radius: 10px;
 }
+.Authors-img{
+    min-height: 100px;
+    min-width: 80px;
+}
+.Popular-Authars{
+    border-radius: 10px;
+}
+.authors{
+    background-color: #009837;
+    border-radius: 10px;
+}
 .published-books{
     border-radius: 10px;
 }
@@ -1652,7 +1663,7 @@ img {
 @media screen and (max-width: 885px) {
     .carousel-caption {
         position: absolute;
-        transform: translateY(100%);
+        transform: translateY(-70%);
         height: fit-content;
     }
 }
