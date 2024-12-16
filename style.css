@@ -1445,6 +1445,23 @@ img {
     background-size: cover;
     height: 500px;
 }
+.bookinfo-banner{
+    background: linear-gradient(180.8deg, #13ac00 3.76%, #036f02 99.29%);
+    background-size: cover;
+    height: 200px;
+}
+.Bookinfo{
+    margin-left: 15%;
+    margin-right: 15%;
+    border:1px solid #ddd;
+    border-radius: 10px;
+}
+.publishType{
+    margin-left: 15%;
+    margin-right: 15%;
+    border:1px solid #ddd;
+    border-radius: 10px;
+}
 .revenue-banner {
     background: url(/img/revenu-banner.jpg)no-repeat 50% 50%;    
 }
