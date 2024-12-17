@@ -28,11 +28,19 @@ body {
 .navbar-toggler:focus {
     box-shadow: none;
 }
-
+.btn-check:checked + .btn {
+    background-color: #009837;
+    color: white;
+}
+.btn-check:focus + .btn, .btn-close:focus {
+    box-shadow: none;
+}
 .btn:focus {
     box-shadow: none;
 }
-
+.btn a{
+    text-decoration: none;
+}
 .btn.active {
     box-shadow: none;
 }

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Bootstrap JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.min.js"
+        integrity="sha512-b6lGn9+1aD2DgwZXuSY4BhhdrDURVzu7f/PASu4H1i5+CRpEalOOz/HNhgmxZTK9lObM1Q7ZG9jONPYz8klIMg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="style.css">
+    <title>INTELXL - BookDetail</title>
+    <link rel="icon" type="image/x-icon" href="img/fav-icon.png" />
+</head>
+
+<body>
+    <!-- ============---Header end----=================== -->
+    <div class="container-fluid main-content p-0" id="RealEstate-detail">
+        <div class="container">
+            <div class="p-5">
+                <form>
+                    <h2 class="text-center">Book information</h2>
+                    <p class="text-center">Enter all the information about your book - It's language, title and
+                        author(s)</p>
+                    <div>
+                        <h5 class="">Book Language<span class="text-danger">*</span></h5>
+                        <p>Primary language in which your book has been written. Incase of bi-lingual or multi-lingual,
+                            choose the language that is used the most.</p>
+                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group"
+                            style="display:flex;flex-wrap:wrap;">
+
+
+                            <div class="m-2">
+                                <input type="radio" class="btn-check profile-for-radio" autocomplete="off" value="1"
+                                    id="english">
+                                <label class="btn profilelabel" for="english">English</label>
+                            </div>
+                            <div class="m-2">
+                                <input type="radio" class="btn-check profile-for-radio" autocomplete="off" value="2"
+                                    id="Tamil">
+                                <label class="btn profilelabel" for="Tamil">Tamil</label>
+                            </div>
+                            <div class="m-2">
+                                <input type="radio" class="btn-check profile-for-radio" autocomplete="off" value="3"
+                                    id="malayalam">
+                                <label class="btn profilelabel" for="malayalam">Malayalam</label>
+                            </div>
+                            <div class="m-2">
+                                <input type="radio" class="btn-check profile-for-radio" autocomplete="off" value="4"
+                                    id="hindi" name="ProfileFor">
+                                <label class="btn profilelabel" for="hindi">Hindi</label>
+                            </div>
+                            <div class="m-2">
+                                <input type="radio" class="btn-check profile-for-radio" autocomplete="off" value="5"
+                                    id="thelugu">
+                                <label class="btn profilelabel" for="thelugu">Thelugu</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <h5 class="">Book Title <span class="text-danger">*</span></h5>
+                        <p>
+                            Choose a unique title. You can use amazon.com to check if your title has already been taken.
+                        </p>
+                        <input class="form-control" placeholder="Enter your book title">
+                    </div>
+                    <div class="mt-3">
+                        <h5 class="">Book Subtitle (optional)</h5>
+                        <p>
+                            Subtitle gives more clarity about your book to readers. Recommended for Non-Fiction books
+                        </p>
+                        <input class="form-control" placeholder="Enter your book Subtitle">
+                    </div>
+                    <div class="mt-3">
+                        <h5 class="">Author Name <span class="text-danger">*</span></h5>
+                        <p>
+                            Author name that would go on the book cover. If you write under Pseudonym, mention that as the author name here.
+                        </p>
+                        <input class="form-control" placeholder="Enter Full name">
+                    </div>
+                    <div class="mt-3">
+                        <h5 class="">Enter Contributors (optional)</h5>
+                        <p>
+                            Add contributors for your work including co-authors, illustrators and editors.
+                        </p>
+                        <div class="radio-list me-2">
+                            <input type="radio" class="form-check-input" id="Co-Author">
+                            <label for="Co-Author" class="form-label">Co-Author</label>
+                        </div>
+                        <div class="radio-list me-2">
+                            <input type="radio" class="form-check-input" id="editor">
+                            <label for="editor" class="form-label">Editor</label>
+                        </div>
+                        <div class="radio-list me-2">
+                            <input type="radio" class="form-check-input" id="Illustrator">
+                            <label for="Illustrator" class="form-label">Illustrator</label>
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <h5 class="">Book Genre<span class="text-danger">*</span></h5>
+                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group"
+                            style="display:flex;flex-wrap:wrap;">
+
+
+                            <div class="m-2">
+                                <input type="radio" class="btn-check profile-for-radio" autocomplete="off" value="1"
+                                    id="Fiction">
+                                <label class="btn profilelabel" for="Fiction">Fiction</label>
+                            </div>
+                            <div class="m-2">
+                                <input type="radio" class="btn-check profile-for-radio" autocomplete="off" value="2"
+                                    id="Non-Fiction">
+                                <label class="btn profilelabel" for="Non-Fiction">Non-Fiction</label>
+                            </div>
+                            <div class="m-2">
+                                <input type="radio" class="btn-check profile-for-radio" autocomplete="off" value="3"
+                                    id="Academic">
+                                <label class="btn profilelabel" for="Academic">Academic</label>
+                            </div>
+                            <div class="m-2">
+                                <input type="radio" class="btn-check profile-for-radio" autocomplete="off" value="4"
+                                    id="Cookbook" name="ProfileFor">
+                                <label class="btn profilelabel" for="Cookbook">Cookbook</label>
+                            </div>
+                            <div class="m-2">
+                                <input type="radio" class="btn-check profile-for-radio" autocomplete="off" value="4"
+                                    id="Children Book" name="ProfileFor">
+                                <label class="btn profilelabel" for="Children Book">Children Book</label>
+                            </div>
+                            <div class="m-2">
+                                <input type="radio" class="btn-check profile-for-radio" autocomplete="off" value="5"
+                                    id="Others">
+                                <label class="btn profilelabel" for="Others">Others</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="mt-3 d-flex">
+                    <div>
+                        <button class="btn btn-secondary px-3">Save as Drafts</button>
+                    </div>
+                    <div class="ps-3">
+                        <div class="btn px-3 btn-success"><a class="text-white" href="BookDesign.html">Save and continue</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ======footer===== -->
+    <footer>
+        <div class="container">
+            <div class="footerContent py-4 text-center">
+                © Copyright <span id="currentYear"></span> IntelXL. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1462,6 +1462,22 @@ img {
     border:1px solid #ddd;
     border-radius: 10px;
 }
+.profilelabel {
+    padding: 0px 20px 0px 20px;
+    border: 1px solid #009837;
+    border-radius: 100px;
+    padding: 5px 15px 5px 15px;
+}
+.Designlabel {
+    width: 250px;
+    height: 100px;
+    border: 1px solid #009837;
+    border-radius: 10px;
+    padding: 5px 15px 5px 15px;
+}
+.Designlabel p{
+    font-size: 13px;
+}
 .revenue-banner {
     background: url(/img/revenu-banner.jpg)no-repeat 50% 50%;    
 }
