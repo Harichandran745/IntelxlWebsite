@@ -28,7 +28,7 @@
 
 .carousel-caption {
     position: absolute;
-    transform: translateY(-80%);
+    transform: translateY(-150%);
     height: fit-content;
 }
 
@@ -1619,6 +1619,52 @@ img {
 .published-books{
     border-radius: 10px;
 }
+.book-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px; /* Adjust spacing between grid items */
+}
+.published-books {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.author-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust column size */
+    gap: 16px; /* Spacing between grid items */
+}
+.Popular-Authars {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.authors {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+}
+.authors h6 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+.authors p {
+    margin: 0;
+    font-size: 14px;
+    color: #ddd;
+}
+.Authors-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 @media screen and (max-width: 750px) {
     .overview > li {
         flex: 0 0 100%;
@@ -1680,7 +1726,7 @@ img {
 @media screen and (max-width: 1450px) {
     .carousel-caption {
         position: absolute;
-        transform: translateY(-50%);
+        transform: translateY(-90%);
         height: fit-content;
     }
 }
@@ -1696,7 +1742,7 @@ img {
 @media screen and (max-width: 885px) {
     .carousel-caption {
         position: absolute;
-        transform: translateY(-70%);
+        transform: translateY(110%);
         height: fit-content;
     }
 }
