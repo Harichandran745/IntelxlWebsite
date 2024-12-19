@@ -439,10 +439,14 @@
 
 /* ========services========= */
 
-
+.our-service-text{
+    font-weight: 600;
+    font-size: 24px;
+}
 
 .our-service-text,
 .our-team-text {
+
     color: #009837;
 }
 
@@ -482,11 +486,11 @@
     color: #21479b;
     text-align: center;
 }
-
+/* 
 h2 {
     font-weight: 500;
     font-size: clamp(30px, 3vw, 58px);
-}
+} */
 
 .banner .hints {
     margin-bottom: calc(12pt + 36px);
@@ -513,7 +517,7 @@ h2 {
 }
 .top-parallax {
     /* The image used */
-    background-image: url('img/services-bg.jpg');
+    background-image: url('img/programming-background.jpg');
     /* Set a specific height */
 }
 .builder-parallax {
@@ -529,7 +533,7 @@ h2 {
 
 .bot-parallax {
     /* The image used */
-    background-image: url('img/services-bg.jpg');
+    background-image: url('img/black-laptop.jpg');
 }
 
 .about-parallax {
@@ -723,11 +727,6 @@ address {
     padding: 0vw 10vw 0vw 10vw;
 }
 
-h5 {
-    font-weight: 600;
-    font-size: 24px;
-    color: #009837;
-}
 
 h1 {
     margin-bottom: 20px;
@@ -1262,9 +1261,11 @@ rightanim {
         text-align: left;
     }
 
-.contact-detail {
-    padding: 10%;
-}
+    .contact-detail {
+        padding: 10%;
+        padding-top: 2%;
+        padding-bottom: 5%;
+    }
 
 .middle-image {
     width: fit-content;
@@ -1446,9 +1447,9 @@ img {
     height: 500px;
 }
 .bookinfo-banner{
-    background: linear-gradient(180.8deg, #13ac00 3.76%, #036f02 99.29%);
+    background: linear-gradient(180.8deg, #080808 3.76%, #036f02 99.29%);
     background-size: cover;
-    height: 200px;
+    height: 400px;
 }
 .Bookinfo{
     margin-left: 15%;
@@ -1477,6 +1478,9 @@ img {
 }
 .Designlabel p{
     font-size: 13px;
+}
+.bookupload-banner {
+    background: url(/img/book-library1.jpg)no-repeat 50% 50%;    
 }
 .revenue-banner {
     background: url(/img/revenu-banner.jpg)no-repeat 50% 50%;    

@@ -34,8 +34,119 @@
 </head>
 
 <body>
+    <header class="mainheader book-hdr">
+        <!-- =================---Desktop----====================== -->
+        <nav class="ix-nav ix-moved navbar navbar-expand-lg">
+            <div class="container-fluid mx-4 px-5">
+             <div class="logo mx-2">
+                 <a class="navbar-brand" href="#">
+                     <img class="desktopViewimg" loading="lazy" src="img/intelxl-high-resolution-logo.png" alt="Intelxl" />
+                 </a>
+             </div>
+             <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            
+             <div class="collapse navbar-collapse" id="navbarNav">
+                 <ul class="navbar-nav ms-auto">
+                     <li class="nav-item">
+                         <a class="nav-link" href="index.html">Home</a>
+                     </li>
+                     <li class="nav-item ">
+                         <a class="nav-link" href="MedicalCoding.html">Medical Coding</a>
+                     </li>
+                     <li class="nav-item ">
+                        <a class="nav-link" href="RealEstate.html">Real Estate</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="BookPublish.html">Publish Book</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a id="navServices" class="nav-link dropdown-toggle px-4 py-1 mx-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="Servicesdropdown dropdown-menu">
+                            <li><a class="dropdown-item" href="Service.html">Services</a></li>
+                            <li><a class="dropdown-item " href="About.html">About Us</a></li>
+                            <li><a class="dropdown-item " href="Careers.html">Careers</a></li>
+                        </ul>
+                    </li>
+                     <!-- <li class="nav-item">
+                        <a class="nav-link" href="Service.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html">About Us</a>
+                    </li>
+                    <li class="nav-item ">
+                     <a class="nav-link" href="Careers.html">Careers</a>
+                    </li> -->
+                     <li class="nav-item ">
+                         <a class="nav-link" href="Contactus.html">Contact Us</a>
+                     </li>
+                 </ul>
+             </div>
+            </div>
+         </nav>
+         <div class="carousel-caption">
+            <div class="captions text-center">
+                <!-- <h1 class="text-2">IntelXL</h1> -->
+                <div class="text text-center">
+                    <h2>Book Publishment</h2>
+                </div>
+                <p class="text-center">Bring Your Stories to Life: Empowering Authors with Seamless Publishing Solutions.</p>
+                <img src="img/carouselimg/line.png">
+            </div>
+            <div class="btn btn-lg text-white abt-btn btn-success"><a class="" href="UploadBook.html">Publish Your Book</a></div>
+        </div>
+        
+    
+        <!--offcanvas for mobile responsive-->
+        <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasWithBackdrop" aria-labelledby="offcanvasWithBackdropLabel" data-bs-backdrop="true">
+            <div class="offcanvas-header">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body p-0">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item p-2 ps-5">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item p-2 ps-5">
+                        <a class="nav-link" href="MedicalCoding.html">Medical Coding</a>
+                    </li>
+                    <li class="nav-item p-2 ps-5">
+                        <a class="nav-link" href="RealEstate.html">Real Estate</a>
+                    </li>
+                    <li class="nav-item active p-2 ps-5">
+                        <a class="nav-link" href="BookPublish.html">Publish Book</a>
+                    </li>
+                    <li class="nav-item  p-2 ps-5">
+                        <a class="nav-link" href="Service.html">Services</a>
+                    </li>
+                    <li class="nav-item  p-2 ps-5">
+                        <a class="nav-link" href="About.html">About Us</a>
+                    </li>
+                    <li class="nav-item p-2 ps-5">
+                     <a class="nav-link" href="Careers.html">Careers</a>
+                    </li>
+                    <li class="nav-item p-2 ps-5">
+                        <a class="nav-link" href="Contactus.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+    
+       
+    </header>
     <!-- ============---Header end----=================== -->
     <div class="container-fluid main-content p-0" id="RealEstate-detail">
+        <section class="banner-cection">
+            <div class="container-fluid bookinfo-banner d-flex justify-content-center align-items-center p-0 ">
+                <div style="z-index:1;">
+                    <h2 class="text-center text-white font-monospace">Start your publishing journey here.</h2>
+                </div>
+            </div>
+        </section>
         <div class="container">
             <div class="p-5">
                 <form>
@@ -43,7 +154,7 @@
                     <p class="text-center">Enter all the information about your book - It's language, title and
                         author(s)</p>
                     <div>
-                        <h5 class="">Book Language<span class="text-danger">*</span></h5>
+                        <h5 class="our-service-text">Book Language<span class="text-danger">*</span></h5>
                         <p>Primary language in which your book has been written. Incase of bi-lingual or multi-lingual,
                             choose the language that is used the most.</p>
                         <div class="btn-group" role="group" aria-label="Basic radio toggle button group"
@@ -78,28 +189,28 @@
                         </div>
                     </div>
                     <div class="mt-3">
-                        <h5 class="">Book Title <span class="text-danger">*</span></h5>
+                        <h5 class="our-service-text">Book Title <span class="text-danger">*</span></h5>
                         <p>
                             Choose a unique title. You can use amazon.com to check if your title has already been taken.
                         </p>
                         <input class="form-control" placeholder="Enter your book title">
                     </div>
                     <div class="mt-3">
-                        <h5 class="">Book Subtitle (optional)</h5>
+                        <h5 class="our-service-text">Book Subtitle (optional)</h5>
                         <p>
                             Subtitle gives more clarity about your book to readers. Recommended for Non-Fiction books
                         </p>
                         <input class="form-control" placeholder="Enter your book Subtitle">
                     </div>
                     <div class="mt-3">
-                        <h5 class="">Author Name <span class="text-danger">*</span></h5>
+                        <h5 class="our-service-text">Author Name <span class="text-danger">*</span></h5>
                         <p>
                             Author name that would go on the book cover. If you write under Pseudonym, mention that as the author name here.
                         </p>
                         <input class="form-control" placeholder="Enter Full name">
                     </div>
                     <div class="mt-3">
-                        <h5 class="">Enter Contributors (optional)</h5>
+                        <h5 class="our-service-text">Enter Contributors (optional)</h5>
                         <p>
                             Add contributors for your work including co-authors, illustrators and editors.
                         </p>
@@ -117,7 +228,7 @@
                         </div>
                     </div>
                     <div class="mt-3">
-                        <h5 class="">Book Genre<span class="text-danger">*</span></h5>
+                        <h5 class="our-service-text">Book Genre<span class="text-danger">*</span></h5>
                         <div class="btn-group" role="group" aria-label="Basic radio toggle button group"
                             style="display:flex;flex-wrap:wrap;">
 

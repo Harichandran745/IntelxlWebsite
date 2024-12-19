@@ -16,7 +16,9 @@ body {
 .main-content {
     min-height: calc(100vh - 152.5px);
 }
-
+.book-hdr{
+    height: auto !important;
+}
 .mainheader {
     position: relative;
     width: 100%;
@@ -30,7 +32,7 @@ body {
 }
 .btn-check:checked + .btn {
     background-color: #009837;
-    color: white;
+    color: white !important;
 }
 .btn-check:focus + .btn, .btn-close:focus {
     box-shadow: none;
@@ -106,7 +108,7 @@ nav {
         font-weight: 600;
     }
 
-.ix-nav .nav-link:hover {
+.ix-nav .nav-link:hover, .nav-link:focus {
     color: #009837;
 }
 
@@ -130,6 +132,8 @@ nav ul li {
 }
 
 .nav-link {
+    align-items: center;
+    display: flex;
     color: #fff;
     font-size: 18px;
     font-weight: 600;
@@ -161,10 +165,16 @@ nav ul li {
 }
 
 .Servicesdropdown {
-    border-top: 1px solid #0088cc;
     border-radius: 0px;
 }
-
+.Servicesdropdown li {
+    width: 100%;
+    padding: 3px;
+}
+.dropdown-item:hover{
+    border-bottom: 3px solid #009837;
+    background-color: #e6f7e9;
+}
 .navbar-nav .nav-item {
     position: relative;
 }

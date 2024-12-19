@@ -63,15 +63,25 @@
                 <li class="nav-item">
                     <a class="nav-link" href="BookPublish.html">Publish Book</a>
                 </li>
-                 <li class="nav-item active">
-                    <a class="nav-link" href="Service.html">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="About.html">About Us</a>
-                </li>
-                <li class="nav-item ">
-                 <a class="nav-link" href="Careers.html">Careers</a>
-                </li>
+                <li class="nav-item active dropdown">
+                        <a id="navServices" class="nav-link dropdown-toggle px-4 py-1 mx-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="Servicesdropdown dropdown-menu">
+                            <li><a class="dropdown-item" href="Service.html">Services</a></li>
+                            <li><a class="dropdown-item " href="About.html">About Us</a></li>
+                            <li><a class="dropdown-item " href="Careers.html">Careers</a></li>
+                        </ul>
+                    </li>
+                     <!-- <li class="nav-item">
+                        <a class="nav-link" href="Service.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html">About Us</a>
+                    </li>
+                    <li class="nav-item ">
+                     <a class="nav-link" href="Careers.html">Careers</a>
+                    </li> -->
                  <li class="nav-item ">
                      <a class="nav-link" href="Contactus.html">Contact Us</a>
                  </li>
@@ -143,14 +153,14 @@
   <div class="container-fluid main-content p-0" id="benefits">
     <div class="softdevopsbody background py-5">
         <div class="pt-5">
-            <h4 class="heading text-center">Our Services</h4>
-            <p class=" text-center">
+            <h4 class="heading">Our Services</h4>
+            <p class="">
                 Knowledge combined with quality gives our clients the edge over other competitors.
                 Value assurance practices and optimized delivery cycles has been our focus from day one.
             </p>
         </div>
         <div class="main">
-            <div class="first py-4 px-5">
+            <div class="first py-4">
                 <div class="pb-2  cardanim">
                     <h3>Technology that work for you</h3>
                 </div>
@@ -172,7 +182,7 @@
                         <div class="card cardanim">
                             <img src="SDimg/card1.jpg" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title"><a href="#">Enterprise Application Development</a></h5>
+                                <h5 class="card-title our-service-text"><a href="#">Enterprise Application Development</a></h5>
                                 <p class="card-text">
                                     Enterprise Application Development focuses on building secure, scalable software tailored 
                                     for business needs, handling complex processes and large data. It ensures reliability, integration, 
@@ -185,7 +195,7 @@
                         <div class="card cardanim">
                             <img src="img/medical-banner.jpg" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title"><a href="#">Medical Coding Service</a></h5>
+                                <h5 class="card-title our-service-text"><a href="#">Medical Coding Service</a></h5>
                                 <p class="card-text">
                                     Medical Coding Service involves translating healthcare diagnoses, procedures, and services into standardized codes. 
                                     These codes enable accurate billing, insurance processing, and record-keeping for healthcare providers.
@@ -197,7 +207,7 @@
                         <div class="card cardanim">
                             <img src="SDimg/card2.jpeg" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title"><a href="#">Enterprise Content Management Systems</a></h5>
+                                <h5 class="card-title our-service-text"><a href="#">Enterprise Content Management Systems</a></h5>
                                 <p class="card-text">
                                     Enterprise Content Management Systems (ECMS) enable organizations to manage, store, and organize digital content efficiently.
                                      They streamline workflows, enhance collaboration, and ensure secure access to information across the organization.
@@ -209,7 +219,7 @@
                         <div class="card cardanim">
                             <img src="SDimg/card3.jpg" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title"><a href="#">Enterprise Mobile Application Development</a></h5>
+                                <h5 class="card-title our-service-text"><a href="#">Enterprise Mobile Application Development</a></h5>
                                 <p class="card-text">
                                     Enterprise Mobile Application Development involves creating secure, scalable mobile apps that support business operations, 
                                     enabling employees and customers to access services on the go. These apps prioritize seamless integration, data security, 
@@ -222,7 +232,7 @@
                         <div class="card cardanim">
                             <img src="SDimg/card4.jpeg" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title"><a href="#">Automated Software Testing</a></h5>
+                                <h5 class="card-title our-service-text"><a href="#">Automated Software Testing</a></h5>
                                 <p class="card-text">
                                     Automated Software Testing uses specialized tools to execute test cases and validate software functionality, reducing manual 
                                     effort and increasing accuracy. It enables faster testing cycles, improves test coverage, and ensures consistent results for 
@@ -235,7 +245,7 @@
                         <div class="card cardanim">
                             <img src="SDimg/card5.jpg" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title"><a href="#">Cloud Computing Services</a></h5>
+                                <h5 class="card-title our-service-text"><a href="#">Cloud Computing Services</a></h5>
                                 <p class="card-text">
                                     Cloud Computing Services provide on-demand access to computing resources like storage, processing power, and 
                                     applications over the internet. They enable scalable, cost-effective solutions for data storage, software deployment, 
@@ -248,7 +258,7 @@
                         <div class="card cardanim">
                             <img src="SDimg/mediamaking.jpg" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title"><a href="#">Media Supporting Service</a></h5>
+                                <h5 class="card-title our-service-text"><a href="#">Media Supporting Service</a></h5>
                                 <p class="card-text">
                                     Media Supporting Service provides tools and infrastructure to manage, store, and deliver multimedia content, ensuring high-quality 
                                     and efficient media distribution. It supports content streaming, digital asset management, and format compatibility for diverse platforms.
