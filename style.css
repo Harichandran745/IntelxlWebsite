@@ -28,9 +28,13 @@
 
 .carousel-caption {
     position: absolute;
-    transform: translateY(-150%);
-    height: fit-content;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    text-align: center;
 }
+
 
 .carousel-dark .carousel-control-prev-icon,
 .carousel-dark .carousel-control-next-icon {
@@ -165,7 +169,6 @@
 
 .captions :nth-child(5) button {
     font-size: 1vw;
-    background-color: #21479b;
     padding: 1vw;
     color: #fff;
     border: 0;
@@ -1605,6 +1608,9 @@ img {
     opacity: 1;
     transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
+.heading-text{
+    color: #009837;
+}
 .book-image{
     min-height: 350px;
     border-radius: 10px;
@@ -1727,13 +1733,27 @@ img {
         margin-top: 0;
     }
 }
-@media screen and (max-width: 1450px) {
+/* @media screen and (max-width: 1450px) {
     .carousel-caption {
         position: absolute;
         transform: translateY(-90%);
         height: fit-content;
     }
 }
+@media screen and (max-width: 885px) {
+    .carousel-caption {
+        position: absolute;
+        transform: translateY(50%);
+        height: fit-content;
+    }
+}
+@media screen and (max-width: 600px) {
+    .carousel-caption {
+        position: absolute;
+        transform: translateY(90%);
+        height: fit-content;
+    }
+} */
 @media screen and (max-width: 1120px) {
     .card-text {
         display: -webkit-box;
@@ -1743,13 +1763,7 @@ img {
         text-overflow: ellipsis;
     }
 }
-@media screen and (max-width: 885px) {
-    .carousel-caption {
-        position: absolute;
-        transform: translateY(110%);
-        height: fit-content;
-    }
-}
+
 @media screen and (max-width: 768px) {
     .card-text {
         display: -webkit-box;

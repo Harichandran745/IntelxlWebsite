@@ -50,6 +50,27 @@ body {
 .btn:first-child:active {
     border-color: transparent;
 }
+.home-hdr{
+    background: url(/img/home-hdr.jpg)no-repeat 50% 50%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.service-hdr{
+    background: url(/img/service-hdr.jpg)no-repeat 50% 50%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.RealEstate-hdr{
+    background: url(/img/RealEstate-hdr.jpg)no-repeat 50% 50%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 .medicode-hdr {
     background: url(/img/mediBack.jpg)no-repeat 50% 50%;
     background-size: cover;
@@ -79,7 +100,13 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
-
+.Career-hdr {
+    background: url(/img/Career-hdr.jpg)no-repeat 50% 50%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 nav {
     
     width: 100%;
