@@ -1674,6 +1674,28 @@ img {
     border-radius: 50%;
     object-fit: cover;
 }
+.md-list ul {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+    margin: 0;
+}
+
+.md-list ul li.diamond {
+    position: relative; /* Enable positioning for the pseudo-element */
+    padding-left: 20px; /* Add space for the diamond */
+}
+
+.md-list ul li.diamond::before {
+    content: ""; 
+    position: absolute; 
+    left: 0; 
+    top: 10px; /* Align the diamond vertically */
+    width: 0; 
+    height: 0; 
+    border: 5px solid #009837; 
+    border-top-color: #009837; /* Diamond color */
+    transform: rotate(45deg); /* Rotate to form a diamond */
+}
 
 @media screen and (max-width: 750px) {
     .overview > li {
