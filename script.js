@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     document.getElementById("currentYear").textContent = new Date().getFullYear();
     // Function to check if an element is in the viewport
     function isElementInViewport(el) {
@@ -11,52 +11,52 @@ $(document).ready(function() {
         );
     }
     // Check elements with class "servicesimg" visibility on scroll
-    $('.cardanim,.imgleft, .textleft, .zoom').css('opacity',1);
+    $('.cardanim,.imgleft, .textleft, .zoom').css('opacity', 1);
 
-    $(window).on('scroll load', function() {
-        $('.zoom').each(function() {
+    $(window).on('scroll load', function () {
+        $('.zoom').each(function () {
             if (isElementInViewport(this) && !$(this).hasClass('scaled')) {
-                $(this).addClass('scaled'); 
+                $(this).addClass('scaled');
                 $(this).css("transform", "scale(1.2)");
 
-                setTimeout(function(element) {
+                setTimeout(function (element) {
                     $(element).css("transform", "scale(1)");
                 }, 200, this);
             }
             setTimeout(function () {
-                $('.zoom').css('opacity',1);
+                $('.zoom').css('opacity', 1);
             }, 400);
         });
-        $('.imgleft, .textleft').each(function() {
+        $('.imgleft, .textleft').each(function () {
             if (isElementInViewport(this) && !$(this).hasClass('scaled')) {
-                $(this).addClass('scaled'); 
-                $(this).addClass('leftanim'); 
+                $(this).addClass('scaled');
+                $(this).addClass('leftanim');
 
-                setTimeout(function(element) {
-                    $(this).removeClass('leftanim'); 
+                setTimeout(function (element) {
+                    $(this).removeClass('leftanim');
                 }, 200, this);
-               
+
             }
             setTimeout(function () {
-                $('.imgleft, .textleft').css('opacity',1);
+                $('.imgleft, .textleft').css('opacity', 1);
             }, 400);
         });
-        $('.cardanim').each(function() {
+        $('.cardanim').each(function () {
             if (isElementInViewport(this) && !$(this).hasClass('scaled')) {
-                
+
                 $(this).addClass('card-img-top');
                 $(this).addClass('scaled');
-                
+
                 let $element = $(this);
-                
+
                 setTimeout(function () {
                     $element.removeClass('card-img-top');
                 }, 400);
-            
+
             }
             setTimeout(function () {
-            $('.cardanim').css('opacity',);
-        }, 400);
+                $('.cardanim').css('opacity',);
+            }, 400);
         });
         // $('.imgright').each(function() {
         //     if (isElementInViewport(this) && !$(this).hasClass('scaled')) {
@@ -74,14 +74,14 @@ $(document).ready(function() {
         () => $('.dropdown-menu').addClass('show'),
         () => $('.dropdown-menu').removeClass('show')
     );
-   
+
     $('body').append('<button id="scrolltop"><i class="fa-solid fa-angle-up"></i></button>');
     var $scrollButton = $('#scrolltop');
-    $(window).scroll(function() {
-     ($(this).scrollTop() > 50)? $scrollButton.fadeIn() : $scrollButton.fadeOut();
+    $(window).scroll(function () {
+        ($(this).scrollTop() > 50) ? $scrollButton.fadeIn() : $scrollButton.fadeOut();
     });
 
-    $scrollButton.click(function() {
+    $scrollButton.click(function () {
         $('html, body').animate({ scrollTop: 0 }, 'slow');
     });
 
@@ -109,29 +109,29 @@ $(document).ready(function() {
     // });
 
     // $('#clients').html(combinedHtml);
-//     const clientHtml = `
-//     <div class="col-12 col-md-2"><img src="clientImg/Amazon_Prime.svg" class="img-fluid"></div>
-//     <div class="col-12 col-md-2"><img src="clientImg/Coca-Cola_logo.svg.png" class="img-fluid"></div>
-//     <div class="col-12 col-md-2"><img src="clientImg/mineral.png" class="img-fluid"></div>
-// `;
+    //     const clientHtml = `
+    //     <div class="col-12 col-md-2"><img src="clientImg/Amazon_Prime.svg" class="img-fluid"></div>
+    //     <div class="col-12 col-md-2"><img src="clientImg/Coca-Cola_logo.svg.png" class="img-fluid"></div>
+    //     <div class="col-12 col-md-2"><img src="clientImg/mineral.png" class="img-fluid"></div>
+    // `;
 
-// let combinedHtml = '';
-//     for (let i = 0; i < 20; i++) {
-//         combinedHtml += clientHtml;
-//     }
-    
-//     $('#clients').html(combinedHtml);
-$(window).scroll(function() {
-    if ($(window).scrollTop()) {
+    // let combinedHtml = '';
+    //     for (let i = 0; i < 20; i++) {
+    //         combinedHtml += clientHtml;
+    //     }
 
-        
-        $(".ix-nav").addClass("ix-fixed");
-        $(".ix-nav").removeClass("ix-moved");
-    } else {
-        $(".ix-nav").addClass("ix-moved");
-        $(".ix-nav").removeClass("ix-fixed");
-    }
+    //     $('#clients').html(combinedHtml);
+    $(window).scroll(function () {
+        if ($(window).scrollTop()) {
+
+
+            $(".ix-nav").addClass("ix-fixed");
+            $(".ix-nav").removeClass("ix-moved");
+        } else {
+            $(".ix-nav").addClass("ix-moved");
+            $(".ix-nav").removeClass("ix-fixed");
+        }
+    });
 });
- });
- 
- 
+
+

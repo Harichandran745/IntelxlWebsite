@@ -139,7 +139,7 @@ nav {
 
     .ix-fixed .nav-link {
         color: #009837;
-        font-size: 18px;
+        font-size: 14px;
         font-weight: 600;
     }
 
@@ -163,14 +163,15 @@ nav {
 
 nav ul li {
     display: inline-flex;
-    padding: 10px 20px 10px 20px;
+    padding: 10px 10px 10px 10px;
 }
+nav div {}
 
 .nav-link {
     align-items: center;
     display: flex;
     color: #fff;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 600;
     padding: 0%;
     text-decoration: none;
@@ -226,8 +227,9 @@ nav ul li {
     /* Additional styling as needed */
 }
 
+
 .desktopViewimg {
-    width: 20vw;
+    width: 10vw;
     max-width: 170px;
 }
 
@@ -258,6 +260,12 @@ nav ul li {
     .ix-moved .custom-toggler:hover {
         background-color: #f8f9fa;
     }
+
+    /* @media (min-width: 1095px) {
+    .navbar-expand-lg .navbar-toggler {
+        display: none;
+    }
+} */
 /* ====footer======= */
 footer {
     background: #d9e8ed;
