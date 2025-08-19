@@ -523,6 +523,12 @@ h2 {
     background-image: url('img/programming-background.jpg');
     /* Set a specific height */
 }
+.ins-parallax {
+    min-height: 350px !important;
+    /* The image used */
+    background-image: url('img/ins-paralax.jpg');
+    /* Set a specific height */
+}
 .builder-parallax {
     /* The image used */
     background-image: url('img/builder-parallax.jpg');

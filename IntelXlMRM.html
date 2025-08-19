@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Bootstrap JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.min.js"
+        integrity="sha512-b6lGn9+1aD2DgwZXuSY4BhhdrDURVzu7f/PASu4H1i5+CRpEalOOz/HNhgmxZTK9lObM1Q7ZG9jONPYz8klIMg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="style.css">
+    <title>INTELXL - Insurance</title>
+    <link rel="icon" type="image/x-icon" href="img/fav-icon.png" />
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1a083d;
+            color: white;
+        }
+        .mrm-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 30px 50px;
+            padding-top: 15%;
+            max-width: 1200px;
+            margin: auto;
+            flex-wrap: wrap;
+        }
+
+        .left {
+            flex: 1;
+            min-width: 300px;
+            padding-right: 40px;
+        }
+
+        .left h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .left p {
+            font-size: 16px;
+            color: #bbb;
+        }
+
+        .right {
+            flex: 1;
+            min-width: 300px;
+            background: #2a1a4f;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        form input,
+        form select,
+        form textarea {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        form textarea {
+            grid-column: span 2;
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px 30px;
+            /* row-gap = 15px, column-gap = 25px */
+        }
+
+        form input:nth-child(1) {
+            margin-right: 15px;
+        }
+
+        .submit-btn {
+            grid-column: span 2;
+            padding: 12px;
+            background: #00e08f;
+            color: black;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #00c67a;
+        }
+
+        .note {
+            font-size: 12px;
+            color: #bbb;
+            margin-top: 10px;
+            grid-column: span 2;
+        }
+
+        .note a {
+            color: #00e08f;
+            text-decoration: none;
+        }
+
+        /* Features Overview Section */
+        .features-overview {
+            background-color: #1a083d;
+            /* dark purple */
+            height: 30vh;
+            /* full screen height */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* center horizontally */
+            justify-content: center;
+            /* center vertically */
+            text-align: center;
+            padding: 20px;
+        }
+
+        .features-overview h2 {
+            font-size: 40px;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .features-overview p {
+            font-size: 16px;
+            color: #bbb;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+
+        .features-section {
+            background-color: #2a0c4d;
+            /* dark purple */
+            color: #fff;
+            padding: 80px 50px;
+        }
+
+        .features-container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: auto;
+            gap: 40px;
+        }
+                .features-containers {
+            align-items: flex-start;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: auto;
+            gap: 40px;
+        }
+
+
+        .features-left {
+            flex: 1;
+        }
+
+        .features-left h2 {
+            font-size: 38px;
+            font-weight: 800;
+            line-height: 1.3;
+        }
+
+        .features-middle {
+            flex: 1.2;
+        }
+
+        .feature {
+            margin-bottom: 25px;
+        }
+
+        .feature h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        .feature p {
+            font-size: 15px;
+            color: #ddd;
+            margin: 0;
+        }
+
+        .features-right {
+            flex: 0.8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circle-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 40px);
+            gap: 12px;
+        }
+
+        .circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .green {
+            background-color: #2ecc71;
+        }
+
+        .blue {
+            background-color: #00c6ff;
+        }
+
+        .yellow {
+            background-color: #f39c12;
+        }
+
+        .purple {
+            background-color: #9b59b6;
+        }
+
+        .teal {
+            background-color: #34495e;
+        }
+
+
+        .mrm-container {
+            display: flex;
+            justify-content: center;
+            /* centers horizontally */
+            align-items: center;
+            /* centers vertically */
+            /* full screen height */
+        }
+
+        .text-section {
+            max-width: 400px;
+            /* optional, controls text width */
+            text-align: center;
+            /* center align text */
+        }
+
+        .section {
+            display: flex;
+            align-items: center;
+            /* vertical centering */
+            justify-content: space-between;
+            /* keeps text left, image right */
+            gap: 2rem;
+            /* space between text & image */
+            padding: 60px;
+            /* adjust as needed */
+        }
+
+        .text-block {
+            max-width: 600px;
+        }
+
+        .residuals {
+            background: #1a083d;
+            /* your dark background */
+            color: #fff;
+            padding: 80px 60px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 60px;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            /* vertical align image + text */
+            justify-content: space-between;
+            gap: 40px;
+            text-align: left;
+            /* text aligns properly */
+        }
+
+        .image-block img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+
+        .text-block {
+            max-width: 600px;
+        }
+
+        .metrics {
+            background: #3b0b72;
+            /* purple background */
+            color: #fff;
+            padding: 80px 60px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 60px;
+        }
+
+        .metrics-content {
+            display: flex;
+            align-items: center;
+            /* vertically center text & image */
+            justify-content: space-between;
+            gap: 50px;
+            text-align: left;
+            /* text aligns nicely */
+        }
+
+        .text-block {
+            max-width: 600px;
+        }
+
+        .text-block h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .text-block h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .text-block ul {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+
+        .image-block img {
+            max-width: 500px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .text-section {
+            max-width: 700px;
+            /* keep text readable */
+            margin: 0 auto;
+            /* center horizontally */
+            text-align: center;
+            /* center-align the text */
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        /* Dashboard Section */
+        .dashboard {
+            display: flex;
+            justify-content: center;
+            padding: 30px 20px;
+        }
+
+        .dashboard img {
+            max-width: 90%;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Content Section */
+        .content {
+            max-width: 900px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            margin-bottom: 15px;
+            color: #ddd;
+        }
+
+        .content ul {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+
+        .content ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Section Container */
+        .section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        /* Title */
+        .section h1 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 50px;
+        }
+
+        /* Two-Column Layout */
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        /* Left Column */
+        .text-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .text-content p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            color: #ddd;
+        }
+
+        .text-content ul {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+
+        .text-content ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Right Column (Separate Cards) */
+        .card-1,
+        .card-2,
+        .card-3 {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .card-1 img,
+        .card-2 img,
+        .card-3 img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .animated-heading {
+      font-size: 2.5rem;
+      text-align: center;
+      line-height: 1.4;
+      color: white;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeInUp 0.5s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .content-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .features-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .features-right {
+                margin-top: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mrm-container {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .left h1 {
+                font-size: 32px;
+            }
+
+            .right {
+                margin-top: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ============---Header start----=================== -->
+    <header class="mainheader insurance-hdr">
+        <!-- <video autoplay="autoplay" loop="" muted="" playsinline="" id="bg-video" class="vd-width parallax">
+            <source src="/img/RealEstate-banner.mp4" type="video/mp4" style="position: fixed;">
+        </video> -->
+        <!-- =================---Desktop----====================== -->
+        <nav class="ix-nav ix-moved navbar navbar-expand-lg">
+            <div class="container-fluid mx-4 px-5">
+             <div class="logo mx-2">
+                 <a class="navbar-brand" href="index.html">
+                     <img class="desktopViewimg" loading="lazy" src="img/intelxl-high-resolution-logo.png" alt="Intelxl" />
+                 </a>
+             </div>
+             <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            
+             <div class="collapse navbar-collapse" id="navbarNav">
+                 <ul class="navbar-nav ms-auto">
+                     <!-- <li class="nav-item active">
+                         <a class="nav-link" href="index.html">Home</a>
+                     </li> -->
+                     <li class="nav-item">
+                         <a class="nav-link" href="MedicalCoding.html">Medical Coding</a>
+                     </li>
+                     <li class="nav-item ">
+                        <a class="nav-link" href="RealEstate.html">Real Estate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="BookPublish.html">Publish Book</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="UnderConstruction.html">IntelXL Learning</a>
+                    </li> -->
+                    <li class="nav-item dropdown active">
+                        <a id="navServices" class="nav-link dropdown-toggle px-4 py-1 mx-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Insurance
+                        </a>
+                        <ul class="Servicesdropdown dropdown-menu">
+                            <li><a class="dropdown-item" href="IntelxlInsurance.html">Intelxl Insurance</a></li>
+                            <li><a class="dropdown-item " href="IntelXlMRM.html">IntelXlMRM</a></li>
+                            <li><a class="dropdown-item " target="_blank" href="http://mulesoft.com/lp/whitepaper/soa/legacy-system-modernization?d=7013y0000020GwjAAE&nc=7013y0000020IFcAAM&utm_content=7013y0000020GwjAAE&utm_source=google&utm_medium=paid_search&utm_campaign=21172672756&utm_adgroup=168366819784&utm_term=legacy%20application%20modernization&utm_matchtype=p&gclsrc=aw.ds&gad_source=1&gad_campaignid=21172672756&gbraid=0AAAAAD94njQWFeWaV21Y2t8Hqvl3h0nz1&gclid=Cj0KCQjw2IDFBhDCARIsABDKOJ4xI1rb3YGDV5kTSG_VsNKEyJGBbM8m--UgBHV8_cGyae_ebbKfG8AaAif4EALw_wcB">MuleSoft</a></li>
+                            <li><a class="dropdown-item " target="_blank" href="https://teams.live.com/l/message/19:437c323706912717f7c3c4f3beb08113c3028cc4cf91f5064bd6b7eecbd72922@oneToOne.skype/1755356921276?context=%7B%22contextType%22%3A%22chat%22%7D">RFP</a></li>
+                            <li><a class="dropdown-item " target="_blank" href="https://www.decerto.com/post/integrating-insurance-software-with-legacy-systems-challenges-and-solutions">Decerto</a></li>
+                            <li><a class="dropdown-item " target="_blank" href="https://oneshield.com/knowledge_hub/oneshield-announces-integration-with-verisks-iso-electronic-rating-content/#:~:text=OneShield%E2%80%99s%20suite%20of%20insurance%20software,and%20accelerating%20speed%20to%20market">One Schieled</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a id="navServices" class="nav-link dropdown-toggle px-4 py-1 mx-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="Servicesdropdown dropdown-menu">
+                            <li><a class="dropdown-item" href="Service.html">Services</a></li>
+                            <li><a class="dropdown-item " href="About.html">About Us</a></li>
+                            <li><a class="dropdown-item " href="Careers.html">Careers</a></li>
+                        </ul>
+                    </li>
+                     <!-- <li class="nav-item">
+                        <a class="nav-link" href="Service.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html">About Us</a>
+                    </li>
+                    <li class="nav-item ">
+                     <a class="nav-link" href="Careers.html">Careers</a>
+                    </li> -->
+                     <li class="nav-item ">
+                         <a class="nav-link" href="Contactus.html">Contact Us</a>
+                     </li>
+                 </ul>
+             </div>
+            </div>
+         </nav>
+        <div class="">
+            <div class="container mrm-container">
+        <!-- Left Content -->
+        <div class="left">
+            <h1 class="animated-heading">
+                INTELXL MRM Residuals <br>
+                Calculation: <br>
+                Reporting and <br>
+                Management
+            </h1>
+            <p>
+                Save time, avoid manual effort and increase accuracy with a universal
+                reporting dashboard and automatic residuals calculations.
+            </p>
+        </div>
+
+        <!-- Right Form -->
+        <div class="right">
+            <form>
+                <input type="text" placeholder="First Name*" required>
+                <input type="text" placeholder="Last Name*" required>
+                <input type="text" placeholder="Company*" required>
+                <input type="email" placeholder="Email Address*" required>
+                <input type="tel" placeholder="e.g. 081234 56789*" required>
+                <select required>
+                    <option value="">Business Type*</option>
+                    <option value="merchant">Merchant</option>
+                    <option value="partner">Partner</option>
+                    <option value="other">Other</option>
+                </select>
+                <select required>
+                    <option value="">Product Interest*</option>
+                    <option value="payments">Payments</option>
+                    <option value="residuals">Residuals</option>
+                    <option value="other">Other</option>
+                </select>
+                <textarea placeholder="Tell us more about your needs..."></textarea>
+                <button type="submit" class="submit-btn">Submit</button>
+                <p class="note">
+                    By submitting your information, you agree to IntelXL’s
+                    <a href="#">Privacy Policy</a> &
+                    <a href="#">Terms and Conditions</a>.
+                </p>
+            </form>
+        </div>
+    </div>
+        </div>
+
+
+        <!--offcanvas for mobile responsive-->
+        <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasWithBackdrop"
+            aria-labelledby="offcanvasWithBackdropLabel" data-bs-backdrop="true">
+            <div class="offcanvas-header">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body p-0">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item p-2 ps-5">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item p-2 ps-5">
+                        <a class="nav-link" href="MedicalCoding.html">Medical Coding</a>
+                    </li>
+                    <li class="nav-item p-2 active ps-5">
+                        <a class="nav-link" href="RealEstate.html">RealEstate</a>
+                    </li>
+                    <li class="nav-item p-2 ps-5">
+                        <a class="nav-link" href="BookPublish.html">Publish Book</a>
+                    </li>
+                    <li class="nav-item  p-2 ps-5">
+                        <a class="nav-link" href="Service.html">Services</a>
+                    </li>
+                    <li class="nav-item p-2 ps-5">
+                        <a class="nav-link" href="About.html">About Us</a>
+                    </li>
+                    <li class="nav-item p-2 ps-5">
+                        <a class="nav-link" href="Careers.html">Careers</a>
+                    </li>
+                    <li class="nav-item p-2 ps-5">
+                        <a class="nav-link" href="Contactus.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+    </header>
+    <!-- ============---Header end----=================== -->
+    <div class="container-fluid main-content p-0" id="RealEstate-detail">
+        <section class="container mrm-container">
+        <p>
+            Your residuals represent the majority of your ISO’s revenues. However, analyzing, managing and calculating
+            residuals is a complex and time-consuming job. As your business grows, these calculations become more
+            intricate.
+            <br>
+            <br>
+            INTELXL’s Merchant Relationship Management (MRM) solution is designed to eliminate the most complex and
+            tedious work associated with managing residuals. It does this by automating data presentation and residuals
+            calculations, so you can spend more time using data and less time trying to wrangle it.
+            <br>
+            <br>
+            The platform provides access to all your residuals data in one place — no matter how many payment processors
+            you’re partnered with. The reporting dashboard is clearly organized, easy to navigate and highly flexible.
+            This allows you to access the data you need quickly without having to sift through a sea of numbers.
+            <br>
+            <br>
+            The MRM’s reporting dashboard impacts the entire organization, giving managers more time to focus on the big
+            picture and improving agent satisfaction.
+        </p>
+    </section>
+
+    <section class="features-overview">
+        <div class="features-containers">
+            <h2 class="animated-heading">Features Overview Section</h2>
+            <p>
+                MRM residuals reporting suite streamlines all areas of your residual
+                management, calculation and payout.
+            </p>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <div class="features-container">
+
+            <!-- Left heading -->
+            <div class="features-left">
+                <h2 class="animated-heading">
+                    Just some of the
+                    features included in <br>
+                    this game-changing <br>
+                    tool include:
+                </h2>
+            </div>
+
+            <!-- Middle feature list -->
+            <div class="features-middle">
+                <div class="feature">
+                    <h3>Centralized Residuals Reporting:</h3>
+                    <p>Say goodbye to wrangling residuals data from multiple processor portals.</p>
+                </div>
+                <div class="feature">
+                    <h3>Automated Residuals Calculation:</h3>
+                    <p>Instantly obtain exact calculations of your ISO and agent net residuals.</p>
+                </div>
+                <div class="feature">
+                    <h3>Portfolio-Wide Metrics:</h3>
+                    <p>Easily access the data you need to maintain a clear view of your company’s overall residual
+                        health.</p>
+                </div>
+                <div class="feature">
+                    <h3>Merchant-Level Metrics:</h3>
+                    <p>Keep a close eye on individual merchant performance to maximize your success through theirs.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right circle graphic -->
+            <div class="features-right">
+                <div class="circle-grid">
+                    <span class="circle green"></span>
+                    <span class="circle blue"></span>
+                    <span class="circle green"></span>
+                    <span class="circle yellow"></span>
+                    <span class="circle purple"></span>
+                    <span class="circle teal"></span>
+                    <span class="circle green"></span>
+                    <span class="circle blue"></span>
+                    <span class="circle yellow"></span>
+                    <span class="circle purple"></span>
+                    <span class="circle yellow"></span>
+                    <span class="circle purple"></span>
+                    <span class="circle purple"></span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section>
+        <div class="container mrm-container">
+            <div class="mockup-section">
+                 <img src="img/Screenshot-2025-08-19-081241 (1).png" alt="Residuals dashboard" style="width: 600px;height: 500px;" />
+            </div>
+
+            <div class="text-section">
+                <h3>Flexible Data Presentation:</h3>
+                <p>the moment, hassle-free, without distraction or clutter.</p>
+                <h3>Integrated Agent Payments:</h3>
+                <p>Send fast and secure ACH Payments to your agents right through the MRM.</p>
+                <h3>Historical Data Import:</h3>
+                <p>Easily upload old residuals reports to the MRM to access your historical data through the
+                    Reporting dashboard...</p>
+                <h3>Mobile Access to Residuals KPIs:</h3>
+                <p>Use our new MRM mobile app to access your key residuals indicators anywhere, anytime. </p>
+            </div>
+        </div>
+    </section>
+    <div class="section">
+        <div class="text-block">
+            <h2 class="animated-heading">Complete, Centralized Residuals Reporting</h2>
+            <h3 class="animated-heading">Complete, Centralized Residuals Reporting</h3>
+            <p><strong>Access All of Your Data, From All of Your Processors, in One Convenient Place.</strong></p>
+            <p>The most successful ISOs work with multiple payment processors to ensure every new merchant has
+                access to the right solution for their unique needs. However, working with all those processors can
+                mean major headaches when residual numbers come out each month. The MRM residuals reporting suite
+                makes your life easier by automatically pulling your data from each payment processor, analyzing it
+                and combining it all in a central, easy-to-use analytics dashboard. With this solution, simply open
+                the reporting suite to see residuals data from each payment processor on one screen. Data is broken
+                down by processor and clearly laid out, with each offering independent summaries, details and
+                profitability views. You and your team will never again have to manually access multiple residuals
+                reports or struggle with collating data from different processors. Instead, the MRM does it for you
+                and houses all the information you need just a click or two away.</p>
+        </div>
+
+        <div class="image-block">
+            <img src="img/f-image-1@2x.png (1).webp" alt="Residuals dashboard" style="width: 600px;height: 600px;" />
+        </div>
+    </div>
+    <section class="residuals">
+        <h1 class="section-title animated-heading">Automated Residuals Calculations</h1>
+
+        <div class="content">
+            <div class="image-block">
+                <img src="img/f-image-2@2x.png (1).webp" alt="Residuals dashboard"
+                    style="width: 600px;height: 600px;" />
+            </div>
+
+            <div class="text-block">
+                <h2>Automated Residuals Calculations</h2>
+                <h3>Eliminate Headaches and Calculate Payouts With Unparalleled Speed and Accuracy.</h3>
+                <p>
+                    Residuals calculations can be complex. That’s especially true for large ISOs working with several
+                    payment processors and a large team of independent agents on different contracts...
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="container metrics mrm-container">
+        <h1 class="section-title">Portfolio-Wide Metrics</h1>
+
+        <div class="metrics-content">
+            <div class="text-block">
+                <h2 class="animated-heading">Portfolio-Wide Metrics</h2>
+                <h3 class="animated-heading">Bring the Big Picture Into Clearer Focus.</h3>
+                <p>
+                    Having a clear view of your residuals on the portfolio level enables you to
+                    monitor the long-term health of your business and ensure that the company’s
+                    strategies are solid and growth is trending upward. Our residuals reporting
+                    dashboard provides fast, easy access to complete portfolio-wide metrics
+                    from each of your payment processors, including:
+                </p>
+
+                <ul>
+                    <li>Monthly volume growth in dollars and as a percentage</li>
+                    <li>Monthly revenue growth in dollars and as a percentage</li>
+                    <li>Average profit per merchant in dollars, BPS and as a percentage</li>
+                    <li>Monthly BPS margin growth as a percentage</li>
+                    <li>YTD profit in dollars and BPS. Lifetime profit in dollars and BPS</li>
+                </ul>
+
+                <p>
+                    With this feature, management can easily access key growth indicators
+                    and analytics wherever and whenever they’re needed...
+                </p>
+            </div>
+
+            <div class="image-block">
+                <img src="img/f-image-3@2x.png (1).webp" alt="Residuals dashboard"
+                    style="width: 600px;height: 600px;" />
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <section class="hero">
+            <h1 class="animated-heading">Merchant Level Metrics</h1>
+        </section>
+
+        <!-- Dashboard/Image Section -->
+        <section class="dashboard">
+            <img src="img/f-image-4@2x.png (1).webp" alt="Residuals dashboard" style="width: 600px;height: 600px;" />
+        </section>
+
+        <!-- Content Section -->
+        <section class="content">
+            <h2>Monitor Your Merchants To Identify Top Performers and Opportunities for Improvement</h2>
+            <p>
+                Your merchants drive your residuals, growth and long-term success. Knowing which are exceeding
+                expectations and which are struggling is vital to appropriately directing resources.
+            </p>
+            <p>
+                Our MRM provides a full set of merchant-level metrics through the residuals reporting dashboard.
+                It also shows financial data through every account, so you can see how each merchant is performing.
+            </p>
+
+            <ul>
+                <li>YTD merchant profit in dollars and BPS</li>
+                <li>Lifetime merchant profit in dollars and BPS</li>
+                <li>12 months of data at a glance</li>
+            </ul>
+
+            <p>
+                By quickly referencing each merchant’s profitability, you can identify and monitor top performers.
+                This allows you to better determine how to dedicate time and service resources. It also ensures you
+                can identify problem merchants and merchants failing to process enough transactions early, enabling
+                your team to take remedial action before you lose money.
+            </p>
+        </section>
+    </section>
+    <section class="section">
+        <h1 class="animated-heading">Flexible Data Presentation</h1>
+
+        <div class="content-wrapper">
+            <!-- Left Column -->
+            <div class="text-content">
+                <h2>View the Data You Need, When You Need It, Without Clutter or Distraction.</h2>
+                <p>
+                    With a large portfolio, a team of independent agents and a roster of merchants across multiple
+                    payment processors, you need a lot of data to calculate residuals accurately. Unfortunately, too
+                    much data can hinder good decision-making and planning, especially if the information is messy and
+                    unorganized.
+                </p>
+                <p>
+                    Our MRM’s residuals reporting suite solves that problem by putting you in full control over the data
+                    you view and how it’s presented. Reporting metrics are configurable in a matter of clicks.
+                </p>
+
+                <ul>
+                    <li>Profitability analytics</li>
+                    <li>Processing-merchants analytics</li>
+                    <li>Financial key indicators</li>
+                    <li>Top merchants by volume and net income</li>
+                    <li>Merchant distribution by geographic states</li>
+                    <li>Industry analytics</li>
+                </ul>
+
+                <p>
+                    The dashboard also enables you to view your residuals as individual line items. Alternatively, you
+                    can use the exceptions tab to focus solely on residuals with unassigned users or percentages.
+                </p>
+            </div>
+
+            <!-- Right Column -->
+            <div class="image-content">
+                <div class="card-1">
+                    <img src="img/f-image-5@2x.png (1).webp" alt="Residuals dashboard"
+                        style="width: 200px;height: 600px;" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="residuals">
+        <h1 class="section-title animated-heading">Integrated Agent Payment Capabilitys</h1>
+
+        <div class="content">
+            <div class="image-block">
+                <img src="img/f-image-6@2x.png (1).webp" alt="Residuals dashboard"
+                    style="width: 600px;height: 600px;" />
+            </div>
+
+            <div class="text-block">
+                <h2 class="animated-heading">Integrated Agent Payment Capability</h2>
+                <h3>Eliminate Headaches and Calculate Payouts With Unparalleled Speed and Accuracy.</h3>
+                <p>
+                    Residual publication is a highly anticipated time. It normally takes a significant amount of time to
+                    collate data, calculate payouts and issue payments. Because of this, most agents receive their
+                    payouts roughly a week after their ISO receives their residuals numbers from the payment processor.
+                    With our robust MRM, you can reduce the time from publication to payout with the platform’s
+                    automatic residual calculations and billing and payment integration. Once your numbers drop, the MRM
+                    will provide you with automatic residuals calculations based on each agent’s contract and split
+                    percentage. You can then use the integrated ACH payment tools to send out your agents’ payments
+                    immediately over the ACH network. The result is happier agents who know they can depend on prompt,
+                    accurate payments every month — an enormous advantage in attracting the best talent.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="residuals">
+        <h1 class="section-title animated-heading">Easily Import Previous Residual Data</h1>
+
+        <div class="content">
+
+
+            <div class="text-block">
+                <h2 class="animated-heading">Easily Import Previous Residual Data</h2>
+                <h3>Eliminate Headaches and Calculate Payouts With Unparalleled Speed and Accuracy.</h3>
+                <p>
+                    INTELXL’s MRM enables you to easily upload previous residuals reports using the Residuals Import
+                    tool. All you need to do is select the file you wish to import and tell the MRM which time period
+                    it’s for and which payment processor it’s from. The system will then parse the data from the report
+                    and make it available in the same flexible, convenient reporting tools as the rest of your
+                    reporting. Once you make the switch, you’ll never have to worry about manually reviewing your old
+                    residuals reports ever again. Just import them into the system and let the MRM do the rest.
+                </p>
+            </div>
+            <div class="image-block">
+                <img src="img/f-image-7@2x.png (1).webp" alt="Residuals dashboard"
+                    style="width: 600px;height: 600px;" />
+            </div>
+        </div>
+    </section>
+    <section class="residuals">
+        <h1 class="section-title animated-heading">Mobile Access to Key Residuals Data</h1>
+
+        <div class="content">
+            <div class="image-block">
+                <img src="img/f-image-8@2x.png (1).webp" alt="Residuals dashboard"
+                    style="width: 600px;height: 600px;" />
+            </div>
+
+            <div class="text-block">
+                <h2 class="animated-heading">Mobile Access to Key Residuals Data</h2>
+                <h3>Eliminate Headaches and Calculate Payouts With Unparalleled Speed and Accuracy.</h3>
+                <p>
+                    The new MRM mobile app provides your team convenient access to essential residuals data anywhere,
+                    anytime. Opening the app’s residuals tab provides an overview of the month’s residuals broken down
+                    by each payment processor. The information includes gross sales volume, transaction volume, your
+                    ISO’s net residuals and your agents’ total net residuals. Tapping on any payment processor brings up
+                    a complete list of all the merchants you have onboarded to them, with the same data categories
+                    available at the processor level (with the addition of the agent split percentage). In addition to
+                    providing fast, convenient access to your key residuals data, the MRM mobile app also offers
+                    merchant relationship management, a complete set of lead management tools, dialer access, helpdesk
+                    ticket management and more. The app automatically syncs with your web-based system, so your agents
+                    can access everything they need from their mobile devices. Available now for Android and iOS in the
+                    Google Play and Apple App stores.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    </div>
+    <!-- ======footer===== -->
+    <footer>
+        <div class="container">
+            <div class="footerContent py-4 text-center">
+                © Copyright <span id="currentYear"></span> IntelXL. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
